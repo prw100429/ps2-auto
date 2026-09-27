@@ -1,4 +1,5 @@
 -- Project Slayers 2 | Clean Remake v5.0 | Standalone executor script
+-- Project Slayers 2 | Clean Remake v6.0 | Standalone executor script
 -- Offline source build; game runtime behavior remains unverified.
 local DATA = {["quests"] = {{["key"] = "Ill take 3 bandits", ["npc"] = "Krue", ["mob"] = "Bandit", ["title"] = "Defeat 3 bandits", ["level"] = 0}, {["key"] = "Ill take the bandit boss(Lv 7)", ["npc"] = "Krue", ["mob"] = "Zuko", ["title"] = "Defeat the bandit boss", ["level"] = 7}, {["key"] = "Ill drive the bears back(Lv 10)", ["npc"] = "Tom", ["mob"] = "Bear Cub", ["title"] = "Hunt the Bears", ["level"] = 10}, {["key"] = "Ill restock the pantry(Lv 10)", ["npc"] = "Lucy", ["mob"] = "Bear Cub", ["title"] = "Acquire Bear Meat", ["level"] = 10}, {["key"] = "Ill fell the Mother Bear(Lv 18)", ["npc"] = "Tom", ["mob"] = "Mother Bear", ["title"] = "Fell the Mother Bear", ["level"] = 18}, {["key"] = "Ill clear out his subordinates(Lv 26)", ["npc"] = "Chaka", ["mob"] = "Kaiden Subordinate", ["title"] = "Clear Kaiden's Subordinates", ["level"] = 26}, {["key"] = "Ill help clear them out", ["npc"] = "Kazu", ["mob"] = "*Civilian*", ["title"] = "Clear Village Spies", ["level"] = 26}, {["key"] = "Ill deal with Kaiden(Lv 34)", ["npc"] = "Chaka", ["mob"] = "Kaiden", ["title"] = "Defeat Kaiden", ["level"] = 34}, {["key"] = "I will clear out his guards(Lv 40)", ["npc"] = "Wagwan", ["mob"] = "Hoyuzo Subordinate", ["title"] = "Clear Hoyuzo's Guard", ["level"] = 40}, {["key"] = "Ill drive them off(Lv 47)", ["npc"] = "Rin", ["mob"] = "Beast Born Demon", ["title"] = "Hold the Night", ["level"] = 47}, {["key"] = "I will take care of Hoyuzo(Lv 50)", ["npc"] = "Wagwan", ["mob"] = "Hoyuzo", ["title"] = "Eliminate Hoyuzo", ["level"] = 50}, {["key"] = "Ill help you defeat them(Lv 90)", ["npc"] = "Wounded Slayer Tomoi", ["mob"] = "Fire Profound Demon", ["title"] = "Drive Off High Demons", ["level"] = 90}, {["key"] = "Theyre not welcome here(Lv 90)", ["npc"] = "Demon Delroy", ["mob"] = "High Demon", ["title"] = "Thin Kanoe Ranks", ["level"] = 90}, {["key"] = "Ill drive back the frost(Lv 105)", ["npc"] = "Demon Slayer Mitsu", ["mob"] = "Ice Profound Demon", ["title"] = "Drive Back the Frost", ["level"] = 105}, {["key"] = "Ill put out the blaze(Lv 115)", ["npc"] = "Demon Slayer Mitsu", ["mob"] = "Fire Profound Demon", ["title"] = "Put Out the Blaze", ["level"] = 115}}, ["npcs"] = {["Angler Runo"] = {-561.0, 796.0, 684.0}, ["Betty"] = {714.0, 1121.0, -808.0}, ["Blacksmith Togane"] = {1732.0, 694.0, -765.0}, ["Chaka"] = {471.0, 1146.0, -1260.0}, ["Demon Delroy"] = {140.0, 1254.0, -1911.0}, ["Demon Mokuro"] = {-1948.0, 28.0, 374.0}, ["Demon Slayer Goro"] = {-872.0, 235.0, 318.0}, ["Demon Slayer Mitsu"] = {-824.0, 1382.0, -2538.0}, ["Dock Master Sofen"] = {-161.0, 796.0, 703.0}, ["Elara"] = {428.0, 941.0, 507.0}, ["Estate Worker Niko"] = {374.0, 942.0, 523.0}, ["Flame Trainer Rengu"] = {-968.0, 1029.0, 1188.0}, ["Ginzo"] = {274.0, 942.0, 528.0}, ["Harvester of Souls Zurinyz"] = {-1213.0, 1387.0, -2372.0}, ["Iceveil Guard Shiro"] = {-107.0, 1349.0, -2499.0}, ["Insect Trainer Shinora"] = {-1799.0, 348.0, -189.0}, ["Jugg"] = {488.0, 874.0, 1008.0}, ["Kazu"] = {-626.0, 1242.0, -1138.0}, ["Krue"] = {-425.0, 1244.0, -952.0}, ["Lamplighter Isamu"] = {1082.0, 1426.0, -749.0}, ["Liv"] = {657.0, 1019.0, 140.0}, ["Lucy"] = {-615.0, 1258.0, -1177.0}, ["MoldySugar"] = {-702.0, 1243.0, -983.0}, ["Noote"] = {-516.0, 1243.0, -1251.0}, ["Ren"] = {-1795.0, 312.0, -85.0}, ["Rin"] = {432.0, 1018.0, 73.0}, ["Serpent Trainer Obari"] = {37.0, 1311.0, -1180.0}, ["Shady Individual Rooyi"] = {-773.0, 965.0, -9.0}, ["Shiori"] = {-1814.0, 312.0, -101.0}, ["Shrine Messenger Akio"] = {-207.0, 1350.0, -2423.0}, ["Soryu Expert Kazuma"] = {-769.0, 909.0, 303.0}, ["Sound Trainer Tengai"] = {465.0, 1491.0, -3273.0}, ["Stone Trainer Gyorei"] = {2579.0, 1096.0, -828.0}, ["Tai Chi Expert Renjiro"] = {1883.0, 687.0, -761.0}, ["Thunder Trainer Zentaro"] = {1970.0, 1660.0, -610.0}, ["Tom"] = {507.0, 1121.0, -970.0}, ["Wagwan"] = {724.0, 1019.0, -802.0}, ["Water Trainer Urokodaki"] = {667.0, 1023.0, -228.0}, ["Wind Trainer Saneri"] = {-276.0, 1187.0, -3437.0}, ["Wounded Slayer Tomoi"] = {485.0, 1223.0, -1813.0}, ["Kona"] = {-791.61, 1262.57, -1130.91}, ["Raze"] = {-594.0, 1245.08, -1095.0}, ["Rika"] = {-497.04, 1249.66, -1176.81}, ["Togane"] = {388.0, 1253.0, -1928.0}}, ["spawns"] = {["Civilian"] = {170.0, 888.0, 603.0}, ["Fire Profound Demon"] = {-916.0, 1374.0, -2431.0}, ["Greater Demon"] = {-499.0, 284.0, 528.0}, ["Hoyuzo Subordinate"] = {533.0, 1001.0, -1357.0}, ["Mizunoe Demon Slayer"] = {-1835.0, 31.0, 487.0}, ["Mother Bear"] = {540.0, 1121.0, -1024.0}, ["Zuko"] = {-297.0, 1224.0, -1023.0}, ["Giyen"] = {388.0, 1018.0, -86.0}, ["Gyorei"] = {2574.0, 1089.0, -743.0}, ["Gyutai"] = {-267.0, 1043.0, -1140.0}, ["Insect Trainee"] = {-1396.0, 261.0, 69.0}, ["Nezura"] = {-1460.0, 275.0, 935.0}, ["Obari"] = {770.0, 1121.0, -1047.0}, ["Reaper Trainee Kuzan"] = {-1220.0, 1373.0, -3035.0}, ["Rengu"] = {-713.0, 965.0, 883.0}, ["Saneri"] = {-380.0, 1093.0, -423.0}, ["Serpent Trainee"] = {-272.0, 1292.0, -1536.0}, ["Shinora"] = {-453.0, 964.0, 2.0}, ["Soryu Trainee Goki"] = {-427.0, 288.0, 543.0}, ["Sound Trainee"] = {192.0, 1349.0, -2582.0}, ["Stone Trainee"] = {2685.0, 1073.0, -569.0}, ["Sumari"] = {396.0, 1018.0, -621.0}, ["Tai Chi Trainee Suzume"] = {2360.0, 601.0, -643.0}, ["Tengai"] = {-134.0, 1349.0, -2632.0}, ["Thunder Trainee"] = {2425.0, 1073.0, -557.0}, ["Water Trainee Sabito"] = {815.0, 1018.0, 101.0}, ["Wind Trainee"] = {-942.0, 1381.0, -2636.0}, ["Yahari"] = {825.0, 1019.0, -642.0}, ["Zentaro"] = {1332.0, 821.0, -1018.0}, ["Akazo"] = {-1132.0, 1380.0, -1747.0}, ["Domae"] = {-297.0, 1350.0, -3452.0}, ["Enru"] = {821.0, 800.0, 543.0}, ["Flame Trainee"] = {-1129.0, 1029.0, 994.0}, ["Fujiko"] = {-2460.0, 37.0, 1119.0}, ["Hoyuzo"] = {746.0, 1001.0, -1413.0}, ["Reaper"] = {98.0, 1043.0, -574.0}}, ["mobs"] = {"*Civilian*", "Akazo", "Bandit", "Bear Cub", "Beast Born Demon", "Blood Hounded Demon", "Cache Lancer", "Cache Prowler", "Civilian", "Datai", "Domae", "Enru", "Fire Profound Demon", "Flame Trainee", "Fujiko", "Giyen", "Greater Demon", "Grove Raider", "Gyorei", "Gyutai", "High Demon", "Hoyuzo", "Hoyuzo Subordinate", "Ice Profound Demon", "Insect Trainee", "Kaiden", "Kaiden Subordinate", "Kanoe Demon Slayer", "Lancer Captain", "Lesser Demon", "Mizunoe Demon Slayer", "Mizunoto", "Mother Bear", "Nezura", "Obari", "Prowler Captain", "Raid Captain", "Reaper", "Reaper Trainee Kuzan", "Rengu", "Saneri", "Serpent Trainee", "Shinora", "Soryu Trainee Goki", "Sound Trainee", "Stone Trainee", "Sumari", "Tai Chi Trainee Suzume", "Tengai", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Yahari", "Zentaro", "Zuko"}, ["bosses"] = {"Akazo", "Datai", "Domae", "Enru", "Flame Trainee", "Fujiko", "Giyen", "Gyorei", "Gyutai", "Hoyuzo", "Insect Trainee", "Kaiden", "Mother Bear", "Nezura", "Obari", "Reaper", "Reaper Trainee Kuzan", "Rengu", "Saneri", "Serpent Trainee", "Shinora", "Soryu Trainee Goki", "Sound Trainee", "Stone Trainee", "Sumari", "Tai Chi Trainee Suzume", "Tengai", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Yahari", "Zentaro", "Zuko"}, ["hunts"] = {["crow"] = {"Mother Bear", "Hoyuzo", "Soryu Trainee Goki", "Reaper Trainee Kuzan", "Datai", "Domae", "Sumari", "Yahari", "Enru", "Nezura", "Gyutai", "Akazo", "Reaper"}, ["muzan"] = {"Flame Trainee", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Stone Trainee", "Serpent Trainee", "Insect Trainee", "Sound Trainee", "Tai Chi Trainee Suzume", "Obari", "Tengai", "Shinora", "Rengu", "Saneri", "Gyorei", "Zentaro", "Giyen", "Gyutai", "Datai"}}}
 local Players = game:GetService("Players")
@@ -15,6 +16,7 @@ local previous = env[registryKey]
 if type(previous) == "table" and type(previous.Unload) == "function" then previous.Unload() end
 
 local state = {
+    bossOrder={"Zuko"}, bossCursor=0, bossCurrent=nil, bossIndex=nil, optimize=false, fishSlot=4, fishSpot=1, fishPickup=false,
     killAura = false, auraRadius = 12, autoLoot = false, lootRadius = 150,
     alive = true, mode = "idle", phase = "대기", selectedMob = "Bandit", generation = 0,
     questIndex = 1, selectedNpc = "Krue", style = "Combat", moveMethod = "즉시 이동",
@@ -34,6 +36,7 @@ local state = {
 if game.PlaceId ~= 136406881576517 then state.attackMode = "장착 Tool 사용" end
 local connections, logs, mobs, npcs = {}, {}, {}, {}
 local clearESP = function() end
+local restorePerformance,releaseFishing=function() end,function() end
 local lootBusy = false
 local releaseLoot, lootFrame, lootTick = function() end, function() end, function() end
 local bossSet = {}
@@ -113,10 +116,12 @@ local function stop(message, emergency)
     state.generation = state.generation + 1
     releaseSkill()
     releaseLoot()
+    releaseFishing()
     releaseMouse()
     restoreEquip()
     restoreTracking()
     state.mode, state.target, state.destination = "idle", nil, nil
+    state.bossCurrent,state.bossIndex=nil,nil
     state.questStep, state.phase = "", "대기"
     state.cooldownUntil, state.questSeen, state.missingSince = 0, false, nil
     state.levelChoice, state.hunt = nil, nil
@@ -124,6 +129,7 @@ local function stop(message, emergency)
         state.espEnabled = false; clearESP()
         state.autoSkill = false
         state.killAura, state.autoLoot = false, false
+        state.optimize,state.fishPickup=false,false;restorePerformance()
         state.antiAFK, state.noSunLocal = false, false
         restoreExtras()
         state.noclip, state.walkOverride = false, false
@@ -294,6 +300,35 @@ local function farm(name, dt)
     state.phase = "사냥: " .. target.name
 end
 
+local function bossTick(dt)
+    if not state.killAura then state.target=nil;state.phase="Combat에서 Kill Aura를 켜세요.";return end
+    local _,_,root=character()
+    if not root then return end
+    local current=state.bossCurrent
+    if current then
+        if current.model.Parent and current.root.Parent and current.hum.Health>0 then
+            state.target=current;state.phase="Boss · "..current.name;return
+        end
+        if current.hum.Health<=0 or not current.model.Parent then
+            state.bossCursor=state.bossIndex or state.bossCursor
+        end
+        state.bossCurrent,state.target=nil,nil
+        releaseSkill();restoreTracking()
+    end
+    local count=#state.bossOrder
+    if count==0 then state.phase="선택된 보스가 없습니다.";return end
+    for step=1,count do
+        local index=(state.bossCursor+step-1)%count+1
+        local target=nearestMob(state.bossOrder[index],root.Position)
+        if target then
+            state.bossCurrent,state.bossIndex,state.target=target,index,target
+            state.phase="Boss · "..target.name
+            return
+        end
+    end
+    state.phase="선택한 보스의 스폰을 기다립니다."
+end
+
 local function trackingTarget()
     if not state.killAura or lootBusy then return nil end
     if not (state.mode == "farm" or state.mode == "boss" or ((state.mode == "quest" or state.mode == "level" or state.mode == "crow" or state.mode == "muzan") and state.questStep == "active")) then return nil end
@@ -397,6 +432,7 @@ local function skillFrame()
                 return
             end
             heldSkill = {key = key, release = release, untilTime = now + state.skillHold}
+            heldSkill = {key = key, release = release, untilTime = now + (setting.hold or state.skillHold)}
             setting.last, lastSkill, skillCursor = now, now, index
             return
         end
@@ -1015,6 +1051,7 @@ end
 
 -- Chest / LootDrop tags and folders are present in the supplied original source.
 local lootSession, lootCandidates = nil, {}
+local fishPrompts=setmetatable({}, {__mode="k"})
 local lootScanAt, lootNextAt = 0, 0
 local lootRetryAt = setmetatable({}, {__mode="k"})
 releaseLoot = function()
@@ -1027,15 +1064,19 @@ releaseLoot = function()
 end
 local function lootAllowed()
     return state.autoLoot and state.alive and windowActive and not Input:GetFocusedTextBox()
+    return (state.autoLoot or state.fishPickup or state.mode=="fishing") and state.alive and windowActive and not Input:GetFocusedTextBox()
         and state.mode~="move" and state.mode~="training" and state.mode~="schematic"
 end
 local function scanLoot()
     local nextList,seen={},{}
+    fishPrompts=setmetatable({}, {__mode="k"})
     local function add(object)
+    local function add(object,isFish)
         for _,prompt in ipairs(object:GetDescendants()) do
             if prompt:IsA("ProximityPrompt") and not seen[prompt] then
                 seen[prompt]=true;table.insert(nextList,prompt)
             end
+            if isFish and prompt:IsA("ProximityPrompt") then fishPrompts[prompt]=true end
         end
         if object:IsA("ProximityPrompt") and not seen[object] then seen[object]=true;table.insert(nextList,object) end
     end
@@ -1046,6 +1087,12 @@ local function scanLoot()
     for _,name in ipairs({"LootDrops","Chests"}) do
         local folder=workspace:FindFirstChild(name)
         if folder then add(folder) end
+    end
+    local debree=workspace:FindFirstChild("Debree")
+    if debree and (state.fishPickup or state.mode=="fishing") then
+        for _,object in ipairs(debree:GetChildren()) do
+            if object.Name:find("FishingCatch",1,true) then add(object,true) end
+        end
     end
     lootCandidates=nextList
 end
@@ -1080,11 +1127,15 @@ lootTick = function()
     if now>=lootScanAt then scanLoot();lootScanAt=now+0.75 end
     local best,distance,oldest
     for _,prompt in ipairs(lootCandidates) do
+        local eligible=(fishPrompts[prompt] and (state.fishPickup or state.mode=="fishing")) or (not fishPrompts[prompt] and state.autoLoot and state.mode~="fishing")
         if prompt.Parent and prompt.Enabled and now>=(lootRetryAt[prompt] or 0) then
+        if eligible and prompt.Parent and prompt.Enabled and now>=(lootRetryAt[prompt] or 0) then
             local position=promptPosition(prompt)
             local d=position and (position-root.Position).Magnitude
             local attempted=lootRetryAt[prompt] or 0
+            local radius=state.mode=="fishing" and 40 or state.lootRadius
             if d and d<=state.lootRadius and (not oldest or attempted<oldest or (attempted==oldest and d<distance)) then
+            if d and d<=radius and (not oldest or attempted<oldest or (attempted==oldest and d<distance)) then
                 best,distance,oldest=prompt,d,attempted
             end
         end
@@ -1099,6 +1150,129 @@ lootTick = function()
     if best.KeyboardKeyCode==Enum.KeyCode.T then lootSession.release=pressSkill("T") end
     lootSession.began=pcall(function() best:InputHoldBegin() end)
     state.phase="Loot · "..tostring(best.ObjectText or best.Parent.Name).." · hold "..string.format("%.1fs",hold)
+end
+
+local fishing={nextAction=0,phase="equip",mouseDown=false,reportAt=0}
+local fishSpots={
+    {name="Mistfall Harbor",at={619.464,1008.5,-853.304},cast={635.09,1001.55,-850.4}},
+    {name="Drowned Ledge",at={-143.13,861.66,213.58},cast={-158.92,789.2,216.12}},
+    {name="Isao's Rod Ledge",at={-2040.12,158.5,276.46},cast={-2056,26.2,278.4}},
+}
+releaseFishing=function()
+    if fishing.mouseDown then
+        fishing.mouseDown=false
+        local remote=event()
+        if remote then pcall(function() remote:FireServer("Tool_Mouse","Up",fishing.cast) end) end
+    end
+    fishing.phase="equip";fishing.nextAction=0;fishing.report=nil;fishing.equipDeadline=nil
+end
+local function fishingReport()
+    -- Original source uses this exact client report name/source/upvalue guard.
+    if type(getgc)~="function" or type(getupvalues)~="function" or not debug or type(debug.getinfo)~="function" then return nil,"실행기가 낚시 완료 함수 조회를 지원하지 않습니다." end
+    local candidate
+    local ok,objects=pcall(getgc,false)
+    if not ok then return nil,"낚시 완료 함수 목록을 읽을 수 없습니다." end
+    for _,value in ipairs(objects) do
+        if type(value)=="function" then
+            local good,info=pcall(debug.getinfo,value)
+            if good and info and info.name=="report" and tostring(info.source):find("Fishing Rod",1,true) then
+                local read,upvalues=pcall(getupvalues,value)
+                if read and type(upvalues)=="table" and upvalues[1]==false then
+                    if candidate and candidate~=value then return nil,"여러 낚시 함수가 감지되어 자동 완료를 멈춥니다." end
+                    candidate=value
+                end
+            end
+        end
+    end
+    return candidate,candidate and nil or "낚시 완료 함수를 확인하지 못했습니다."
+end
+local function fishingTick()
+    local now=os.clock()
+    if not windowActive or Input:GetFocusedTextBox() then releaseFishing();return end
+    local char,_,root=character()
+    if not char then return end
+    if fishing.mouseDown then
+        if now>=fishing.nextAction then
+            local remote=event();fishing.mouseDown=false
+            if remote then remote:FireServer("Tool_Mouse","Up",fishing.cast) end
+            fishing.phase="bite";fishing.deadline=now+50
+        end
+        return
+    end
+    if now<fishing.nextAction then return end
+    local remote=event()
+    if not remote then stop("낚시 Event를 찾지 못했습니다.");return end
+    local spot=fishSpots[state.fishSpot]
+    fishing.cast=Vector3.new(table.unpack(spot.cast))
+    local accessories=char:FindFirstChild("Tool_Accessories")
+    local rod=false
+    if accessories then for _,object in ipairs(accessories:GetChildren()) do if object.Name:find("Fishing Rod",1,true) then rod=true;break end end end
+    if not rod then
+        if fishing.phase~="equip" then fishing.equipDeadline=nil end
+        fishing.phase="equip";fishing.equipDeadline=fishing.equipDeadline or now+10
+        if now>fishing.equipDeadline then stop("Fishing Rod를 확인하지 못했습니다. 낚싯대 슬롯을 확인하세요.");return end
+        equipSlot(state.fishSlot);fishing.nextAction=now+0.5;return
+    end
+    fishing.equipDeadline=nil
+    moveTo(Vector3.new(table.unpack(spot.at)),0,fishing.cast)
+    if fishing.phase=="equip" or fishing.phase=="cast" then
+        remote:FireServer("Tool_Mouse","Down",fishing.cast)
+        fishing.mouseDown=true;fishing.nextAction=now+0.15;return
+    end
+    if fishing.phase=="bite" then
+        state.phase="Fishing · 입질 대기"
+        if player:GetAttribute("FishingBite") then
+            local report,problem=fishingReport()
+            if not report then stop(problem);return end
+            local ok=pcall(report,true)
+            if not ok then stop("낚시 완료 요청 실패");return end
+            fishing.phase="catch";fishing.deadline=now+8;fishing.nextAction=now+0.5
+        elseif now>fishing.deadline then fishing.phase="cast";fishing.nextAction=now+2 end
+    elseif fishing.phase=="catch" then
+        state.phase="Fishing · 잡은 아이템 수집 대기"
+        if now>fishing.deadline then fishing.phase="cast";fishing.nextAction=now+1 end
+    end
+end
+
+local function fishingFrame()
+    if fishing.mouseDown and os.clock()>=fishing.nextAction then
+        local remote=event();fishing.mouseDown=false
+        if remote then pcall(function() remote:FireServer("Tool_Mouse","Up",fishing.cast) end) end
+        fishing.phase="bite";fishing.deadline=os.clock()+50
+    end
+end
+local performance={saved=setmetatable({}, {__mode="k"}),queue={},index=1,active=false}
+local function reduceVisual(object)
+    local property,value
+    if object:IsA("ParticleEmitter") or object:IsA("Trail") or object:IsA("Beam") or object:IsA("Fire") or object:IsA("Smoke") or object:IsA("Sparkles") or object:IsA("PostEffect") then
+        property,value="Enabled",false
+    elseif object:IsA("BasePart") then property,value="CastShadow",false
+    elseif object:IsA("Lighting") then property,value="GlobalShadows",false end
+    if property then
+        pcall(function()
+            if not performance.saved[object] then performance.saved[object]={property=property,value=object[property]} end
+            object[property]=value
+        end)
+    end
+end
+restorePerformance=function()
+    for object,saved in pairs(performance.saved) do if object.Parent then pcall(function() object[saved.property]=saved.value end) end end
+    table.clear(performance.saved);performance.queue={};performance.index=1;performance.active=false
+end
+local function performanceTick()
+    if not state.optimize then if performance.active then restorePerformance() end;return end
+    if not performance.active then
+        performance.active=true;performance.queue=workspace:GetDescendants();performance.index=1
+        local lighting=game:GetService("Lighting")
+        table.insert(performance.queue,lighting)
+        for _,object in ipairs(lighting:GetDescendants()) do table.insert(performance.queue,object) end
+    end
+    for _=1,200 do
+        local object=performance.queue[performance.index]
+        if not object then performance.queue={};performance.index=1;break end
+        performance.queue[performance.index]=false;performance.index=performance.index+1
+        if object.Parent then reduceVisual(object) end
+    end
 end
 
 -- Local Roblox UI; no downloaded library, assets, files, clipboard or telemetry.
@@ -1150,11 +1324,13 @@ statusLabel.TextSize = 12
 make("Frame", {Position = UDim2.fromOffset(166, 74), Size = UDim2.new(0, 1, 1, -146),
     BackgroundColor3 = Color3.fromRGB(42, 51, 65), BorderSizePixel = 0}, panel)
 local badge = label(panel, "v5.0  ·  LOCAL UI", UDim2.fromOffset(148, 22))
+local badge = label(panel, "v6.0  ·  LOCAL UI", UDim2.fromOffset(148, 22))
 badge.Position, badge.TextSize, badge.TextColor3 = UDim2.fromOffset(18, 51), 11, colors.accent
 local pageTitle = label(panel, "자동사냥", UDim2.new(1, -204, 0, 34))
 pageTitle.Position, pageTitle.TextSize = UDim2.fromOffset(188, 63), 23
 local pages, tabButtons, bindings = {}, {}, {}
 local pageTitles = {"자동사냥", "보스 사냥", "퀘스트", "이동", "자동 스킬", "상태 / 설정", "Combat", "Misc", "ESP", "장비 / 설계도", "트레이닝", "Kill Aura", "상자 / 아이템"}
+local pageTitles = {"사냥", "퀘스트", "이동", "자동 스킬", "상태 / 설정", "Combat", "ESP", "장비 / 설계도", "트레이닝", "상자 / 아이템", "낚시"}
 local selectedTab = 1
 local function newPage()
     local p = make("ScrollingFrame", {Size = UDim2.new(1, -204, 1, -180), Position = UDim2.fromOffset(188, 106),
@@ -1200,7 +1376,9 @@ local function toggle(parent, title, key)
         if key == "autoSkill" and not state[key] then releaseSkill() end
         if key == "killAura" and not state[key] then releaseSkill();restoreTracking();state.target=nil end
         if key == "autoLoot" and not state[key] then releaseLoot() end
+        if key == "fishPickup" and not state[key] and state.mode~="fishing" then releaseLoot() end
         if key == "noSunLocal" and not state[key] then restoreExtras() end
+        if key=="optimize" and not state[key] then restorePerformance() end
         if (key == "noclip" or key == "walkOverride") and not state[key] then restoreMovement() end
     end)
 end
@@ -1236,26 +1414,53 @@ local function slider(parent,title,key,minimum,maximum)
     local track=make("TextButton",{Text="",AutoButtonColor=false,Size=UDim2.new(1,-16,0,16),Position=UDim2.fromOffset(8,36),BackgroundColor3=colors.card,BorderSizePixel=0},frame)
     local fill=make("Frame",{Size=UDim2.new(0,0,1,0),BackgroundColor3=colors.accent,BorderSizePixel=0},track)
     local knob=make("Frame",{Size=UDim2.fromOffset(18,24),AnchorPoint=Vector2.new(0.5,0.5),Position=UDim2.fromScale(0,0.5),BackgroundColor3=colors.text,BorderSizePixel=0},track)
+local function numeric(parent,title,key,minimum,maximum,integer,values)
+    values=values or state
+    local frame=make("Frame",{Size=UDim2.new(1,0,0,68),BackgroundTransparency=1},parent)
+    label(frame,title,UDim2.new(0.68,0,0,30)).TextSize=13
+    local box=make("TextBox",{Size=UDim2.new(0.29,0,0,30),Position=UDim2.fromScale(0.71,0),Text=tostring(values[key]),ClearTextOnFocus=false,TextSize=14,Font=Enum.Font.Gotham,TextColor3=colors.text,BackgroundColor3=colors.card,BorderSizePixel=0},frame)
+    local track=make("TextButton",{Text="",AutoButtonColor=false,Size=UDim2.new(1,-18,0,18),Position=UDim2.fromOffset(9,42),BackgroundColor3=colors.card,BorderSizePixel=0},frame)
+    local fill=make("Frame",{Size=UDim2.fromScale(0,1),BackgroundColor3=colors.accent,BorderSizePixel=0,Active=false},track)
+    local knob=make("TextButton",{Text="",Size=UDim2.fromOffset(20,26),AnchorPoint=Vector2.new(0.5,0.5),Position=UDim2.fromScale(0,0.5),BackgroundColor3=colors.text,BorderSizePixel=0},track)
     local dragging
+    local function set(value)
+        if not value or value~=value or math.abs(value)==math.huge then return end
+        value=integer and math.floor(value+0.5) or math.floor(value*100+0.5)/100
+        values[key]=math.clamp(value,minimum,maximum)
+    end
+    local function render()
+        local ratio=math.clamp(((values[key] or minimum)-minimum)/(maximum-minimum),0,1)
+        fill.Size=UDim2.fromScale(ratio,1);knob.Position=UDim2.fromScale(ratio,0.5)
+        if not box:IsFocused() then box.Text=tostring(values[key]) end
+    end
     local function update(x)
         local ratio=math.clamp((x-track.AbsolutePosition.X)/math.max(1,track.AbsoluteSize.X),0,1)
         state[key]=math.floor((minimum+ratio*(maximum-minimum))*100+0.5)/100
+        set(minimum+ratio*(maximum-minimum));render()
     end
     connect(track.InputBegan,function(input)
+    local function begin(input)
         if input.UserInputType==Enum.UserInputType.MouseButton1 or input.UserInputType==Enum.UserInputType.Touch then dragging=input;update(input.Position.X) end
     end)
+    end
+    connect(track.InputBegan,begin);connect(knob.InputBegan,begin)
     connect(Input.InputChanged,function(input)
         if dragging and (input==dragging or input.UserInputType==Enum.UserInputType.MouseMovement) then update(input.Position.X) end
+        if dragging and (input==dragging or (dragging.UserInputType==Enum.UserInputType.MouseButton1 and input.UserInputType==Enum.UserInputType.MouseMovement)) then update(input.Position.X) end
     end)
     connect(Input.InputEnded,function(input)
         if input==dragging or input.UserInputType==Enum.UserInputType.MouseButton1 then dragging=nil end
     end)
+    connect(Input.InputEnded,function(input) if input==dragging or (dragging and input.UserInputType==Enum.UserInputType.MouseButton1 and dragging.UserInputType==Enum.UserInputType.MouseButton1) then dragging=nil end end)
     connect(Input.WindowFocusReleased,function() dragging=nil end)
     table.insert(bindings,function()
         local ratio=(state[key]-minimum)/(maximum-minimum)
         fill.Size=UDim2.fromScale(ratio,1);knob.Position=UDim2.fromScale(ratio,0.5)
         text.Text=string.format("%s: %.2f초 · 드래그",title,state[key])
     end)
+    connect(box.FocusLost,function() set(tonumber(box.Text));box.Text=tostring(values[key]);render() end)
+    table.insert(bindings,render);render()
+    return box
 end
 
 local popup
@@ -1312,6 +1517,7 @@ boundButton(farmTargetCard, function() return "몬스터 선택: " .. state.sele
     chooser("몬스터 선택", choices, function(name) stop(nil); state.selectedMob = name end)
 end)
 local attackCard = section(pages[12], "KILL AURA  /  자동 공격")
+local attackCard = section(pages[6], "KILL AURA  /  자동 공격")
 toggle(attackCard,"Kill Aura","killAura")
 numeric(attackCard,"공격 범위 (studs)","auraRadius",2,12)
 row(attackCard,"켜야 자동사냥·보스·퀘스트의 공격과 자동 스킬이 실행됩니다. 대기 중에는 가까운 일반 몬스터를 공격합니다. 다른 게임은 Tool 공격을 기본으로 사용하며 전용 퀘스트·전투는 호환되지 않을 수 있습니다.")
@@ -1348,13 +1554,30 @@ boundButton(bossCard, function() return "선택: " .. state.selectedBoss end, fu
     end
     chooser("보스 선택", choices, function(name) stop(nil); state.selectedBoss = name end)
 end)
+local bossCard = section(pages[1], "BOSS  /  원본 보스 목록 33종")
+row(bossCard,"보스를 누른 순서대로 목록에 추가합니다. 한 마리를 잡는 동안 다른 보스로 바꾸지 않으며, 다음에 살아 있는 선택 보스를 순환합니다.")
+local bossSelection=row(bossCard,"")
+table.insert(bindings,function() bossSelection.Text="선택 순서: "..(#state.bossOrder>0 and table.concat(state.bossOrder," → ") or "없음") end)
+button(bossCard,"보스 선택 모두 해제",function() if state.mode=="boss" then stop("보스 선택 초기화") end;state.bossOrder={};state.bossCursor=0 end)
+for _,bossName in ipairs(DATA.bosses) do
+    local name=bossName
+    boundButton(bossCard,function() local index=table.find(state.bossOrder,name);return (index and string.format("[%02d] ",index) or "[  ] ")..name end,function()
+        if state.mode=="boss" then stop("보스 선택 변경") end
+        local index=table.find(state.bossOrder,name)
+        if index then table.remove(state.bossOrder,index) else table.insert(state.bossOrder,name) end
+        state.bossCursor=0
+    end)
+end
 local bossStart = boundButton(bossCard, function() return state.mode == "boss" and "보스 사냥 정지" or "보스 사냥 시작" end,
     function() if state.mode == "boss" then stop("보스 사냥 정지") else start("boss") end end)
 bossStart.BackgroundColor3, bossStart.TextColor3 = colors.accent, colors.bg
 row(pages[2], "공격 스타일은 Combat, 자세·추적 설정은 자동사냥 탭과 공유합니다. 자동 스킬도 보스 사냥에 적용됩니다.")
+row(pages[1], "공격 스타일은 Combat에서, 자세는 이 사냥 탭에서 설정합니다. 자동 스킬도 보스 사냥에 적용됩니다.")
 
 row(pages[3], "선택한 처치 퀘스트를 수락 → 사냥 → 완료 요청합니다. 레벨·선행 조건은 게임이 검사합니다.")
 boundButton(pages[3], function() return "퀘스트: " .. DATA.quests[state.questIndex].title end, function()
+row(pages[2], "선택한 처치 퀘스트를 수락 → 사냥 → 완료 요청합니다. 레벨·선행 조건은 게임이 검사합니다.")
+boundButton(pages[2], function() return "퀘스트: " .. DATA.quests[state.questIndex].title end, function()
     local choices = {}
     for index, q in ipairs(DATA.quests) do table.insert(choices, {label = "Lv " .. q.level .. " | " .. q.title .. " | " .. q.npc, value = index}) end
     chooser("처치 퀘스트 선택", choices, function(index) stop(nil); state.questIndex = index end)
@@ -1362,16 +1585,22 @@ end)
 local questInfo = row(pages[3], "")
 toggle(pages[3], "완료 후 같은 퀘스트 반복", "repeatQuest")
 boundButton(pages[3], function() return state.mode == "quest" and "퀘스트 자동화 정지" or "퀘스트 자동화 시작" end,
+local questInfo = row(pages[2], "")
+toggle(pages[2], "완료 후 같은 퀘스트 반복", "repeatQuest")
+boundButton(pages[2], function() return state.mode == "quest" and "퀘스트 자동화 정지" or "퀘스트 자동화 시작" end,
     function() if state.mode == "quest" then stop("퀘스트 자동화 정지") else start("quest") end end)
 row(pages[3], "배송·수집·선행 스토리 분기는 이 버전에 포함하지 않았습니다. 직접 수락한 처치 퀘스트도 이어서 진행할 수 있습니다.")
+row(pages[2], "배송·수집·선행 스토리 분기는 이 버전에 포함하지 않았습니다. 직접 수락한 처치 퀘스트도 이어서 진행할 수 있습니다.")
 
 local levelCard = section(pages[3], "AUTO LEVEL FARM")
+local levelCard = section(pages[2], "AUTO LEVEL FARM")
 row(levelCard, "현재 Level 이하의 처치 퀘스트를 자동 선택합니다. 진행 중인 퀘스트를 먼저 마치고, 올라간 Level로 다시 선택하고 수락될 때까지 대화합니다.")
 local levelLabel = row(levelCard, "Level · 읽는 중")
 boundButton(levelCard, function() return state.mode == "level" and "Auto Level Farm 정지" or "Auto Level Farm 시작" end,
     function() if state.mode == "level" then stop("Auto Level Farm 정지") else start("level") end end)
 row(levelCard, "선행 조건·NPC 접근 실패 시 다른 후보를 시도합니다. 배송·스토리 선행 퀘스트까지 자동 해결하지는 않습니다.")
 local huntCard = section(pages[3], "CROW / MUZAN QUESTS")
+local huntCard = section(pages[2], "CROW / MUZAN QUESTS")
 numeric(huntCard, "Crow Toolbar Slot", "crowSlot", 1, 8, true)
 boundButton(huntCard, function() return state.mode == "crow" and "Crow Quest 정지" or "Crow Quest 시작" end,
     function() if state.mode == "crow" then stop("Crow Quest 정지") else start("crow") end end)
@@ -1383,6 +1612,9 @@ row(huntCard, "잠기지 않은 Hunt를 수락하고 보스를 사냥합니다. 
 row(pages[4], "NPC·퀘스트·사냥·상자 이동을 모두 즉시 이동으로 통일했습니다.")
 row(pages[4],"모든 이동: 즉시 이동")
 boundButton(pages[4], function() return "NPC 선택: " .. state.selectedNpc end, function()
+row(pages[3], "NPC·퀘스트·사냥·상자 이동을 모두 즉시 이동으로 통일했습니다.")
+row(pages[3],"모든 이동: 즉시 이동")
+boundButton(pages[3], function() return "NPC 선택: " .. state.selectedNpc end, function()
     scanWorld()
     local names, choices = {}, {}
     for name in pairs(DATA.npcs) do names[name] = true end
@@ -1392,6 +1624,7 @@ boundButton(pages[4], function() return "NPC 선택: " .. state.selectedNpc end,
     chooser("NPC 선택", choices, function(name) state.selectedNpc = name end)
 end)
 button(pages[4], "선택한 NPC로 이동", function()
+button(pages[3], "선택한 NPC로 이동", function()
     local _, _, root = character()
     if not root then log("캐릭터가 준비되지 않았습니다."); return end
     local npc = findNpc(state.selectedNpc, root.Position)
@@ -1403,6 +1636,10 @@ local xBox = numeric(pages[4], "X 좌표", "x", -100000, 100000)
 local yBox = numeric(pages[4], "Y 좌표", "y", -100000, 100000)
 local zBox = numeric(pages[4], "Z 좌표", "z", -100000, 100000)
 button(pages[4], "현재 위치를 좌표 칸에 넣기", function()
+local xBox = numeric(pages[3], "X 좌표", "x", -100000, 100000)
+local yBox = numeric(pages[3], "Y 좌표", "y", -100000, 100000)
+local zBox = numeric(pages[3], "Z 좌표", "z", -100000, 100000)
+button(pages[3], "현재 위치를 좌표 칸에 넣기", function()
     local _, _, root = character()
     if root then
         state.x, state.y, state.z = root.Position.X, root.Position.Y, root.Position.Z
@@ -1414,6 +1651,11 @@ toggle(pages[4], "충돌 해제", "noclip")
 toggle(pages[4], "걷기 / 점프 설정 적용", "walkOverride")
 numeric(pages[4], "걷기 속도 (8–100)", "walkSpeed", 8, 100)
 numeric(pages[4], "점프 파워 (20–150)", "jumpPower", 20, 150)
+button(pages[3], "입력 좌표로 이동", function() travel(Vector3.new(state.x, state.y, state.z), "좌표 이동") end)
+toggle(pages[3], "충돌 해제", "noclip")
+toggle(pages[3], "걷기 / 점프 설정 적용", "walkOverride")
+numeric(pages[3], "걷기 속도 (8–100)", "walkSpeed", 8, 100)
+numeric(pages[3], "점프 파워 (20–150)", "jumpPower", 20, 150)
 
 local skillCard = section(pages[5], "SKILLS  /  Z · X · C · V · B · N · K")
 toggle(skillCard, "자동 스킬", "autoSkill")
@@ -1424,6 +1666,17 @@ for _, name in ipairs(skillKeys) do
     local b = boundButton(frame, function() return key .. (skills[key].enabled and "    ON" or "    OFF") end, function()
         skills[key].enabled = not skills[key].enabled
         if not skills[key].enabled and heldSkill and heldSkill.key == key then releaseSkill() end
+local skillCard=section(pages[4],"자동 스킬 · Z / X / C / V / B / N / K")
+toggle(skillCard,"자동 스킬","autoSkill")
+row(skillCard,"키별 ON/OFF, 홀드 시간, 재입력 간격을 설정하세요. Combat의 Kill Aura가 켜져 있고 사냥 대상이 가까울 때만 순서대로 입력합니다.")
+numeric(skillCard,"스킬 사이 간격 (초)","skillGap",0.05,5)
+for _,name in ipairs(skillKeys) do
+    local key=name
+    local card=section(pages[4],key)
+    skills[key].hold=skills[key].hold or state.skillHold
+    boundButton(card,function() return key..(skills[key].enabled and " · ON" or " · OFF") end,function()
+        skills[key].enabled=not skills[key].enabled
+        if not skills[key].enabled and heldSkill and heldSkill.key==key then releaseSkill() end
     end)
     b.Size = UDim2.new(0.42, 0, 1, 0)
     local l = label(frame, "간격 (초)", UDim2.new(0.25, 0, 1, 0))
@@ -1437,6 +1690,8 @@ for _, name in ipairs(skillKeys) do
         box.Text = tostring(skills[key].interval)
     end)
     table.insert(bindings, function() b.BackgroundColor3 = skills[key].enabled and Color3.fromRGB(32, 84, 73) or colors.card end)
+    numeric(card,"홀드 시간 (초)","hold",0.05,5,false,skills[key])
+    numeric(card,"재입력 간격 (초)","interval",0.05,120,false,skills[key])
 end
 local inputCard = section(pages[5], "INPUT  /  키 입력")
 cycle(inputCard, "입력 방식", "skillBackend", {"자동", "VirtualInputManager", "실행기 키 입력"})
@@ -1447,6 +1702,9 @@ row(inputCard, "채팅·검색 입력 중에는 스킬을 멈춥니다. 정지·
 toggle(pages[6], "리스폰 후 자동화 재개", "autoResume")
 local diagnostics = row(pages[6], "")
 button(pages[6], "게임 구조 다시 확인", function()
+toggle(pages[5], "리스폰 후 자동화 재개", "autoResume")
+local diagnostics = row(pages[5], "")
+button(pages[5], "게임 구조 다시 확인", function()
     scanWorld()
     local holder, problem = questHolder()
     diagnostics.Text = "전투 Event: " .. (event() and "확인" or "없음") .. "\n몬스터: " .. #mobs .. " / NPC: " .. #npcs ..
@@ -1460,6 +1718,9 @@ local logLabel = row(pages[6], "")
 local defenseCard = section(pages[7], "PARRY  /  확인 결과")
 row(defenseCard, "Auto Parry / Infinite Parry: 현재 미지원. 원본 AutoParry는 프리미엄 안내만 호출하며 Blocking 모듈 내용·패링 조건은 덤프에 없습니다.")
 local miscCard = section(pages[8], "MISC  /  보조 기능")
+row(pages[5], "RightShift: 창 표시 / 숨김 · End: 전체 정지\n외부 다운로드·웹훅·파일 쓰기 없음. 실제 게임 실행 검증은 아직 하지 않았습니다.")
+local logLabel = row(pages[5], "")
+local miscCard = section(pages[5], "MISC  /  보조 기능")
 toggle(miscCard, "Anti AFK", "antiAFK")
 toggle(miscCard, "SunDamage LocalScript 비활성 (실험)", "noSunLocal")
 row(miscCard, "확인된 PlayerGui.UCS.Game_Play.SunDamage만 비활성화합니다. 서버의 Sun 피해까지 차단한다고 검증한 기능은 아닙니다. 해제·종료하면 원래 설정을 복원합니다.")
@@ -1497,10 +1758,12 @@ connect(Input.InputBegan, function(input, processed)
     elseif not processed and input.KeyCode == Enum.KeyCode.RightShift then panel.Visible = not panel.Visible end
 end)
 connect(Input.WindowFocusReleased, function() windowActive = false; releaseSkill(); releaseLoot(); releaseMouse() end)
+connect(Input.WindowFocusReleased, function() windowActive = false; releaseSkill(); releaseLoot(); releaseFishing(); releaseMouse() end)
 connect(Input.WindowFocused, function() windowActive = true end)
 connect(player.CharacterRemoving, function()
     releaseSkill()
     releaseLoot()
+    releaseFishing()
     releaseMouse()
     restoreEquip()
     restoreTracking()
@@ -1551,6 +1814,7 @@ connect(RunService.Stepped, function()
     end
 end)
 local espCard=section(pages[9],"ESP · 현재 불러와진 대상")
+local espCard=section(pages[7],"ESP · 현재 불러와진 대상")
 toggle(espCard,"ESP 전체","espEnabled")
 numeric(espCard,"최대 거리 (studs)","espDistance",50,50000,true)
 row(espCard,"거리와 이름을 표시합니다. 미공개 Breathing / Level / Clan은 Unknown입니다. 맵 밖 미로드 대상은 찾을 수 없습니다.")
@@ -1565,6 +1829,7 @@ for _,name in ipairs({"Player","Boss","Monster","NPC","Muzan","Spider Lily"}) do
         else log("RGB를 0–255 숫자 세 개로 입력하세요.") end
         box.Text=table.concat(espColors[group],", ")
     end)
+    for index,label in ipairs({"R","G","B"}) do numeric(espCard,group.." · "..label,index,0,255,true,espColors[group]) end
 end
 button(espCard,"Roaming Muzan · 현재 위치로 텔레포트",function()
     specialScanAt=0;scanSpecial()
@@ -1583,6 +1848,7 @@ button(espCard,"Roaming Muzan · 현재 위치로 텔레포트",function()
     log("Roaming Muzan의 현재 위치로 이동했습니다.")
 end)
 local gearCard=section(pages[10],"Nightfall / Firstlight · Schematic")
+local gearCard=section(pages[8],"Nightfall / Firstlight · Schematic")
 row(gearCard,"완성 장비 지급이 아닌 설계도 수집입니다. 선행 아이템·단서가 필요하며, 내 Inventory에 설계도가 생겨야 획득 완료로 표시합니다. 각 항목의 자동 수집은 기존 사냥을 정지합니다.")
 for _,entry in ipairs(gear) do
     local item=entry
@@ -1591,6 +1857,7 @@ for _,entry in ipairs(gear) do
 end
 row(gearCard,"Firstlight Bottom / Nightfall Bottom: 이 자료에서는 위치와 획득 절차를 확인하지 못했습니다. War Fans는 WarFansClue_4 + Shovel, Tanto는 Shovel + Mushroom Lit Lantern 착용이 필요합니다.")
 local trainingCard=section(pages[11],"Training · 실험 기능")
+local trainingCard=section(pages[9],"Training · 실험 기능")
 row(trainingCard,"로드된 훈련 시설로 이동하고 시작한 후 원본의 완료 요청을 1회 보냅니다. 서버가 수락하는지와 실제 진행도는 게임에서 확인해야 합니다. 다른 미니게임을 종료한 후 사용하세요.")
 for _,name in ipairs(trainings) do
     local training=name
@@ -1599,10 +1866,30 @@ end
 row(trainingCard,"Auto Breathing / Auto Become Demon / Auto Demon Art: 원본에 전체 실행 코드가 없어 지원하지 않습니다. 훈련 버튼만으로 능력 획득까지 완료되지는 않습니다.")
 
 local lootCard=section(pages[13],"상자 열기 + 떨어진 아이템 수집")
+local lootCard=section(pages[10],"상자 열기 + 떨어진 아이템 수집")
 toggle(lootCard,"상자 / 아이템 자동 수집","autoLoot")
 numeric(lootCard,"탐색 반경 (studs)","lootRadius",10,50000,true)
 row(lootCard,"열 수 있는 상자와 아이템으로 즉시 이동합니다. 홀드 시간 동안 자리를 유지하고, 남아 있는 대상은 다시 시도합니다. T 프롬프트는 T를 누른 뒤 해제합니다. 사냥보다 수집을 먼저 처리합니다.")
 row(lootCard,"Sealed Chest: 경비 3명을 연결하는 정보와 자동 레이드 실행 코드가 없어 자동 경비 처치는 지원하지 않습니다. 잠금이 풀려 프롬프트가 활성화된 상자는 수집합니다.")
+local perfCard=section(pages[5],"화면 최적화")
+toggle(perfCard,"그림자·입자 효과 줄이기","optimize")
+row(perfCard,"그림자·파티클·후처리 효과를 줄입니다. 해제와 End·종료 시 원래 값으로 복원합니다. 공격 예고 효과도 줄어들 수 있습니다. FPS 상승 폭은 기기와 장면에 따라 다릅니다.")
+connect(workspace.DescendantAdded,function(object) if performance.active then table.insert(performance.queue,object) end end)
+connect(game:GetService("Lighting").DescendantAdded,function(object) if performance.active then table.insert(performance.queue,object) end end)
+local fishCard=section(pages[11],"자동 낚시 · 실험 기능")
+numeric(fishCard,"낚싯대 슬롯","fishSlot",1,8,true)
+boundButton(fishCard,function() return "낚시 장소: "..fishSpots[state.fishSpot].name end,function()
+    local choices={};for i,spot in ipairs(fishSpots) do table.insert(choices,{label=spot.name,value=i}) end
+    chooser("낚시 장소",choices,function(i) if state.mode=="fishing" then stop("낚시 장소 변경") end;state.fishSpot=i end)
+end)
+boundButton(fishCard,function() return state.mode=="fishing" and "자동 낚시 정지" or "자동 낚시 시작" end,function()
+    if state.mode=="fishing" then stop("낚시 정지") else
+        if type(getgc)~="function" or type(getupvalues)~="function" or not debug or type(debug.getinfo)~="function" then log("실행기가 낚시 완료 함수 조회를 지원하지 않습니다.");return end
+        start("fishing")
+    end
+end)
+toggle(fishCard,"낚시 아이템 자동 수집","fishPickup")
+row(fishCard,"자동 낚시 중에는 잡은 아이템 수집도 실행합니다. 낚싯대·허가·미끼는 준비되어 있어야 합니다. 원본의 입질 감지 및 완료 함수가 현재 게임·실행기에서 확인되지 않으면 중단합니다.")
 local accumulator, scanAt, renderAt = 0, 0, 0
 local heartbeatBusy = false
 connect(RunService.Heartbeat, function(dt)
@@ -1610,6 +1897,7 @@ connect(RunService.Heartbeat, function(dt)
     -- Follow the live target every frame, independent of scans, UI and quest polling.
     local fastOK, fastProblem = pcall(function()
         if heldMouse and (os.clock() >= heldMouse.untilTime or not windowActive) then releaseMouse() end
+        fishingFrame()
         lootFrame()
         trackFrame(dt)
         skillFrame()
@@ -1631,11 +1919,14 @@ connect(RunService.Heartbeat, function(dt)
     local ok, problem = pcall(function()
         local now = os.clock()
         if now >= scanAt then scanWorld(); extrasTick(); espTick(); scanAt = now + 0.75 end
+        performanceTick()
         lootTick()
         if not lootBusy and state.mode ~= "idle" then
             if not character() then state.phase = "캐릭터 대기"
             elseif state.mode == "farm" then farm(state.selectedMob, elapsed)
             elseif state.mode == "boss" then farm(state.selectedBoss, elapsed)
+            elseif state.mode == "boss" then bossTick(elapsed)
+            elseif state.mode == "fishing" then fishingTick()
             elseif state.mode == "quest" or state.mode == "level" then questTick(elapsed)
             elseif state.mode == "crow" or state.mode == "muzan" then huntTick(elapsed)
             elseif state.mode == "schematic" or state.mode == "training" then activityTick(elapsed)
@@ -1658,4 +1949,5 @@ connect(RunService.Heartbeat, function(dt)
     end
 end)
 log("준비 완료. 상태 탭에서 구조를 확인하고 Kill Aura 탭에서 무기를 맞추고 켠 뒤 시작하세요.")
+log("준비 완료. 상태 탭에서 구조를 확인하고 Combat 탭에서 무기를 맞추고 켠 뒤 시작하세요.")
 refreshUI()
