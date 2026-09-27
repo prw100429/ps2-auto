@@ -1,4 +1,3 @@
--- Project Slayers 2 | Clean Remake v5.0 | Standalone executor script
 -- Project Slayers 2 | Clean Remake v6.0 | Standalone executor script
 -- Offline source build; game runtime behavior remains unverified.
 local DATA = {["quests"] = {{["key"] = "Ill take 3 bandits", ["npc"] = "Krue", ["mob"] = "Bandit", ["title"] = "Defeat 3 bandits", ["level"] = 0}, {["key"] = "Ill take the bandit boss(Lv 7)", ["npc"] = "Krue", ["mob"] = "Zuko", ["title"] = "Defeat the bandit boss", ["level"] = 7}, {["key"] = "Ill drive the bears back(Lv 10)", ["npc"] = "Tom", ["mob"] = "Bear Cub", ["title"] = "Hunt the Bears", ["level"] = 10}, {["key"] = "Ill restock the pantry(Lv 10)", ["npc"] = "Lucy", ["mob"] = "Bear Cub", ["title"] = "Acquire Bear Meat", ["level"] = 10}, {["key"] = "Ill fell the Mother Bear(Lv 18)", ["npc"] = "Tom", ["mob"] = "Mother Bear", ["title"] = "Fell the Mother Bear", ["level"] = 18}, {["key"] = "Ill clear out his subordinates(Lv 26)", ["npc"] = "Chaka", ["mob"] = "Kaiden Subordinate", ["title"] = "Clear Kaiden's Subordinates", ["level"] = 26}, {["key"] = "Ill help clear them out", ["npc"] = "Kazu", ["mob"] = "*Civilian*", ["title"] = "Clear Village Spies", ["level"] = 26}, {["key"] = "Ill deal with Kaiden(Lv 34)", ["npc"] = "Chaka", ["mob"] = "Kaiden", ["title"] = "Defeat Kaiden", ["level"] = 34}, {["key"] = "I will clear out his guards(Lv 40)", ["npc"] = "Wagwan", ["mob"] = "Hoyuzo Subordinate", ["title"] = "Clear Hoyuzo's Guard", ["level"] = 40}, {["key"] = "Ill drive them off(Lv 47)", ["npc"] = "Rin", ["mob"] = "Beast Born Demon", ["title"] = "Hold the Night", ["level"] = 47}, {["key"] = "I will take care of Hoyuzo(Lv 50)", ["npc"] = "Wagwan", ["mob"] = "Hoyuzo", ["title"] = "Eliminate Hoyuzo", ["level"] = 50}, {["key"] = "Ill help you defeat them(Lv 90)", ["npc"] = "Wounded Slayer Tomoi", ["mob"] = "Fire Profound Demon", ["title"] = "Drive Off High Demons", ["level"] = 90}, {["key"] = "Theyre not welcome here(Lv 90)", ["npc"] = "Demon Delroy", ["mob"] = "High Demon", ["title"] = "Thin Kanoe Ranks", ["level"] = 90}, {["key"] = "Ill drive back the frost(Lv 105)", ["npc"] = "Demon Slayer Mitsu", ["mob"] = "Ice Profound Demon", ["title"] = "Drive Back the Frost", ["level"] = 105}, {["key"] = "Ill put out the blaze(Lv 115)", ["npc"] = "Demon Slayer Mitsu", ["mob"] = "Fire Profound Demon", ["title"] = "Put Out the Blaze", ["level"] = 115}}, ["npcs"] = {["Angler Runo"] = {-561.0, 796.0, 684.0}, ["Betty"] = {714.0, 1121.0, -808.0}, ["Blacksmith Togane"] = {1732.0, 694.0, -765.0}, ["Chaka"] = {471.0, 1146.0, -1260.0}, ["Demon Delroy"] = {140.0, 1254.0, -1911.0}, ["Demon Mokuro"] = {-1948.0, 28.0, 374.0}, ["Demon Slayer Goro"] = {-872.0, 235.0, 318.0}, ["Demon Slayer Mitsu"] = {-824.0, 1382.0, -2538.0}, ["Dock Master Sofen"] = {-161.0, 796.0, 703.0}, ["Elara"] = {428.0, 941.0, 507.0}, ["Estate Worker Niko"] = {374.0, 942.0, 523.0}, ["Flame Trainer Rengu"] = {-968.0, 1029.0, 1188.0}, ["Ginzo"] = {274.0, 942.0, 528.0}, ["Harvester of Souls Zurinyz"] = {-1213.0, 1387.0, -2372.0}, ["Iceveil Guard Shiro"] = {-107.0, 1349.0, -2499.0}, ["Insect Trainer Shinora"] = {-1799.0, 348.0, -189.0}, ["Jugg"] = {488.0, 874.0, 1008.0}, ["Kazu"] = {-626.0, 1242.0, -1138.0}, ["Krue"] = {-425.0, 1244.0, -952.0}, ["Lamplighter Isamu"] = {1082.0, 1426.0, -749.0}, ["Liv"] = {657.0, 1019.0, 140.0}, ["Lucy"] = {-615.0, 1258.0, -1177.0}, ["MoldySugar"] = {-702.0, 1243.0, -983.0}, ["Noote"] = {-516.0, 1243.0, -1251.0}, ["Ren"] = {-1795.0, 312.0, -85.0}, ["Rin"] = {432.0, 1018.0, 73.0}, ["Serpent Trainer Obari"] = {37.0, 1311.0, -1180.0}, ["Shady Individual Rooyi"] = {-773.0, 965.0, -9.0}, ["Shiori"] = {-1814.0, 312.0, -101.0}, ["Shrine Messenger Akio"] = {-207.0, 1350.0, -2423.0}, ["Soryu Expert Kazuma"] = {-769.0, 909.0, 303.0}, ["Sound Trainer Tengai"] = {465.0, 1491.0, -3273.0}, ["Stone Trainer Gyorei"] = {2579.0, 1096.0, -828.0}, ["Tai Chi Expert Renjiro"] = {1883.0, 687.0, -761.0}, ["Thunder Trainer Zentaro"] = {1970.0, 1660.0, -610.0}, ["Tom"] = {507.0, 1121.0, -970.0}, ["Wagwan"] = {724.0, 1019.0, -802.0}, ["Water Trainer Urokodaki"] = {667.0, 1023.0, -228.0}, ["Wind Trainer Saneri"] = {-276.0, 1187.0, -3437.0}, ["Wounded Slayer Tomoi"] = {485.0, 1223.0, -1813.0}, ["Kona"] = {-791.61, 1262.57, -1130.91}, ["Raze"] = {-594.0, 1245.08, -1095.0}, ["Rika"] = {-497.04, 1249.66, -1176.81}, ["Togane"] = {388.0, 1253.0, -1928.0}}, ["spawns"] = {["Civilian"] = {170.0, 888.0, 603.0}, ["Fire Profound Demon"] = {-916.0, 1374.0, -2431.0}, ["Greater Demon"] = {-499.0, 284.0, 528.0}, ["Hoyuzo Subordinate"] = {533.0, 1001.0, -1357.0}, ["Mizunoe Demon Slayer"] = {-1835.0, 31.0, 487.0}, ["Mother Bear"] = {540.0, 1121.0, -1024.0}, ["Zuko"] = {-297.0, 1224.0, -1023.0}, ["Giyen"] = {388.0, 1018.0, -86.0}, ["Gyorei"] = {2574.0, 1089.0, -743.0}, ["Gyutai"] = {-267.0, 1043.0, -1140.0}, ["Insect Trainee"] = {-1396.0, 261.0, 69.0}, ["Nezura"] = {-1460.0, 275.0, 935.0}, ["Obari"] = {770.0, 1121.0, -1047.0}, ["Reaper Trainee Kuzan"] = {-1220.0, 1373.0, -3035.0}, ["Rengu"] = {-713.0, 965.0, 883.0}, ["Saneri"] = {-380.0, 1093.0, -423.0}, ["Serpent Trainee"] = {-272.0, 1292.0, -1536.0}, ["Shinora"] = {-453.0, 964.0, 2.0}, ["Soryu Trainee Goki"] = {-427.0, 288.0, 543.0}, ["Sound Trainee"] = {192.0, 1349.0, -2582.0}, ["Stone Trainee"] = {2685.0, 1073.0, -569.0}, ["Sumari"] = {396.0, 1018.0, -621.0}, ["Tai Chi Trainee Suzume"] = {2360.0, 601.0, -643.0}, ["Tengai"] = {-134.0, 1349.0, -2632.0}, ["Thunder Trainee"] = {2425.0, 1073.0, -557.0}, ["Water Trainee Sabito"] = {815.0, 1018.0, 101.0}, ["Wind Trainee"] = {-942.0, 1381.0, -2636.0}, ["Yahari"] = {825.0, 1019.0, -642.0}, ["Zentaro"] = {1332.0, 821.0, -1018.0}, ["Akazo"] = {-1132.0, 1380.0, -1747.0}, ["Domae"] = {-297.0, 1350.0, -3452.0}, ["Enru"] = {821.0, 800.0, 543.0}, ["Flame Trainee"] = {-1129.0, 1029.0, 994.0}, ["Fujiko"] = {-2460.0, 37.0, 1119.0}, ["Hoyuzo"] = {746.0, 1001.0, -1413.0}, ["Reaper"] = {98.0, 1043.0, -574.0}}, ["mobs"] = {"*Civilian*", "Akazo", "Bandit", "Bear Cub", "Beast Born Demon", "Blood Hounded Demon", "Cache Lancer", "Cache Prowler", "Civilian", "Datai", "Domae", "Enru", "Fire Profound Demon", "Flame Trainee", "Fujiko", "Giyen", "Greater Demon", "Grove Raider", "Gyorei", "Gyutai", "High Demon", "Hoyuzo", "Hoyuzo Subordinate", "Ice Profound Demon", "Insect Trainee", "Kaiden", "Kaiden Subordinate", "Kanoe Demon Slayer", "Lancer Captain", "Lesser Demon", "Mizunoe Demon Slayer", "Mizunoto", "Mother Bear", "Nezura", "Obari", "Prowler Captain", "Raid Captain", "Reaper", "Reaper Trainee Kuzan", "Rengu", "Saneri", "Serpent Trainee", "Shinora", "Soryu Trainee Goki", "Sound Trainee", "Stone Trainee", "Sumari", "Tai Chi Trainee Suzume", "Tengai", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Yahari", "Zentaro", "Zuko"}, ["bosses"] = {"Akazo", "Datai", "Domae", "Enru", "Flame Trainee", "Fujiko", "Giyen", "Gyorei", "Gyutai", "Hoyuzo", "Insect Trainee", "Kaiden", "Mother Bear", "Nezura", "Obari", "Reaper", "Reaper Trainee Kuzan", "Rengu", "Saneri", "Serpent Trainee", "Shinora", "Soryu Trainee Goki", "Sound Trainee", "Stone Trainee", "Sumari", "Tai Chi Trainee Suzume", "Tengai", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Yahari", "Zentaro", "Zuko"}, ["hunts"] = {["crow"] = {"Mother Bear", "Hoyuzo", "Soryu Trainee Goki", "Reaper Trainee Kuzan", "Datai", "Domae", "Sumari", "Yahari", "Enru", "Nezura", "Gyutai", "Akazo", "Reaper"}, ["muzan"] = {"Flame Trainee", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Stone Trainee", "Serpent Trainee", "Insect Trainee", "Sound Trainee", "Tai Chi Trainee Suzume", "Obari", "Tengai", "Shinora", "Rengu", "Saneri", "Gyorei", "Zentaro", "Giyen", "Gyutai", "Datai"}}}
@@ -431,7 +430,6 @@ local function skillFrame()
                 log("스킬 키 입력을 지원하지 않습니다. 스킬 탭에서 입력 방식을 확인하세요.")
                 return
             end
-            heldSkill = {key = key, release = release, untilTime = now + state.skillHold}
             heldSkill = {key = key, release = release, untilTime = now + (setting.hold or state.skillHold)}
             setting.last, lastSkill, skillCursor = now, now, index
             return
@@ -1063,14 +1061,12 @@ releaseLoot = function()
     end
 end
 local function lootAllowed()
-    return state.autoLoot and state.alive and windowActive and not Input:GetFocusedTextBox()
     return (state.autoLoot or state.fishPickup or state.mode=="fishing") and state.alive and windowActive and not Input:GetFocusedTextBox()
         and state.mode~="move" and state.mode~="training" and state.mode~="schematic"
 end
 local function scanLoot()
     local nextList,seen={},{}
     fishPrompts=setmetatable({}, {__mode="k"})
-    local function add(object)
     local function add(object,isFish)
         for _,prompt in ipairs(object:GetDescendants()) do
             if prompt:IsA("ProximityPrompt") and not seen[prompt] then
@@ -1128,13 +1124,11 @@ lootTick = function()
     local best,distance,oldest
     for _,prompt in ipairs(lootCandidates) do
         local eligible=(fishPrompts[prompt] and (state.fishPickup or state.mode=="fishing")) or (not fishPrompts[prompt] and state.autoLoot and state.mode~="fishing")
-        if prompt.Parent and prompt.Enabled and now>=(lootRetryAt[prompt] or 0) then
         if eligible and prompt.Parent and prompt.Enabled and now>=(lootRetryAt[prompt] or 0) then
             local position=promptPosition(prompt)
             local d=position and (position-root.Position).Magnitude
             local attempted=lootRetryAt[prompt] or 0
             local radius=state.mode=="fishing" and 40 or state.lootRadius
-            if d and d<=state.lootRadius and (not oldest or attempted<oldest or (attempted==oldest and d<distance)) then
             if d and d<=radius and (not oldest or attempted<oldest or (attempted==oldest and d<distance)) then
                 best,distance,oldest=prompt,d,attempted
             end
@@ -1323,13 +1317,11 @@ statusLabel.Position = UDim2.new(0, 16, 1, -53)
 statusLabel.TextSize = 12
 make("Frame", {Position = UDim2.fromOffset(166, 74), Size = UDim2.new(0, 1, 1, -146),
     BackgroundColor3 = Color3.fromRGB(42, 51, 65), BorderSizePixel = 0}, panel)
-local badge = label(panel, "v5.0  ·  LOCAL UI", UDim2.fromOffset(148, 22))
 local badge = label(panel, "v6.0  ·  LOCAL UI", UDim2.fromOffset(148, 22))
 badge.Position, badge.TextSize, badge.TextColor3 = UDim2.fromOffset(18, 51), 11, colors.accent
 local pageTitle = label(panel, "자동사냥", UDim2.new(1, -204, 0, 34))
 pageTitle.Position, pageTitle.TextSize = UDim2.fromOffset(188, 63), 23
 local pages, tabButtons, bindings = {}, {}, {}
-local pageTitles = {"자동사냥", "보스 사냥", "퀘스트", "이동", "자동 스킬", "상태 / 설정", "Combat", "Misc", "ESP", "장비 / 설계도", "트레이닝", "Kill Aura", "상자 / 아이템"}
 local pageTitles = {"사냥", "퀘스트", "이동", "자동 스킬", "상태 / 설정", "Combat", "ESP", "장비 / 설계도", "트레이닝", "상자 / 아이템", "낚시"}
 local selectedTab = 1
 local function newPage()
@@ -1393,27 +1385,6 @@ local function section(parent, title)
     heading.TextColor3, heading.TextSize = colors.accent, 12
     return frame
 end
-local function numeric(parent, title, key, minimum, maximum, integer)
-    local frame = make("Frame", {Size = UDim2.new(1, 0, 0, 38), BackgroundTransparency = 1}, parent)
-    local l = label(frame, title, UDim2.new(0.67, 0, 1, 0))
-    l.TextSize = 13
-    local box = make("TextBox", {Size = UDim2.new(0.3, 0, 1, 0), Position = UDim2.fromScale(0.7, 0),
-        Text = tostring(state[key]), ClearTextOnFocus = false, BackgroundColor3 = colors.card,
-        TextColor3 = colors.text, TextSize = 14, Font = Enum.Font.Gotham, BorderSizePixel = 0}, frame)
-    connect(box.FocusLost, function()
-        local n = tonumber(box.Text)
-        if not n or n ~= n or math.abs(n) == math.huge then log("숫자를 입력하세요: " .. title)
-        else state[key] = math.clamp(integer and math.floor(n) or n, minimum, maximum) end
-        box.Text = tostring(state[key])
-    end)
-    return box
-end
-local function slider(parent,title,key,minimum,maximum)
-    local frame=make("Frame",{Size=UDim2.new(1,0,0,64),BackgroundTransparency=1},parent)
-    local text=label(frame,"",UDim2.new(1,0,0,25))
-    local track=make("TextButton",{Text="",AutoButtonColor=false,Size=UDim2.new(1,-16,0,16),Position=UDim2.fromOffset(8,36),BackgroundColor3=colors.card,BorderSizePixel=0},frame)
-    local fill=make("Frame",{Size=UDim2.new(0,0,1,0),BackgroundColor3=colors.accent,BorderSizePixel=0},track)
-    local knob=make("Frame",{Size=UDim2.fromOffset(18,24),AnchorPoint=Vector2.new(0.5,0.5),Position=UDim2.fromScale(0,0.5),BackgroundColor3=colors.text,BorderSizePixel=0},track)
 local function numeric(parent,title,key,minimum,maximum,integer,values)
     values=values or state
     local frame=make("Frame",{Size=UDim2.new(1,0,0,68),BackgroundTransparency=1},parent)
@@ -1435,29 +1406,17 @@ local function numeric(parent,title,key,minimum,maximum,integer,values)
     end
     local function update(x)
         local ratio=math.clamp((x-track.AbsolutePosition.X)/math.max(1,track.AbsoluteSize.X),0,1)
-        state[key]=math.floor((minimum+ratio*(maximum-minimum))*100+0.5)/100
         set(minimum+ratio*(maximum-minimum));render()
     end
-    connect(track.InputBegan,function(input)
     local function begin(input)
         if input.UserInputType==Enum.UserInputType.MouseButton1 or input.UserInputType==Enum.UserInputType.Touch then dragging=input;update(input.Position.X) end
-    end)
     end
     connect(track.InputBegan,begin);connect(knob.InputBegan,begin)
     connect(Input.InputChanged,function(input)
-        if dragging and (input==dragging or input.UserInputType==Enum.UserInputType.MouseMovement) then update(input.Position.X) end
         if dragging and (input==dragging or (dragging.UserInputType==Enum.UserInputType.MouseButton1 and input.UserInputType==Enum.UserInputType.MouseMovement)) then update(input.Position.X) end
-    end)
-    connect(Input.InputEnded,function(input)
-        if input==dragging or input.UserInputType==Enum.UserInputType.MouseButton1 then dragging=nil end
     end)
     connect(Input.InputEnded,function(input) if input==dragging or (dragging and input.UserInputType==Enum.UserInputType.MouseButton1 and dragging.UserInputType==Enum.UserInputType.MouseButton1) then dragging=nil end end)
     connect(Input.WindowFocusReleased,function() dragging=nil end)
-    table.insert(bindings,function()
-        local ratio=(state[key]-minimum)/(maximum-minimum)
-        fill.Size=UDim2.fromScale(ratio,1);knob.Position=UDim2.fromScale(ratio,0.5)
-        text.Text=string.format("%s: %.2f초 · 드래그",title,state[key])
-    end)
     connect(box.FocusLost,function() set(tonumber(box.Text));box.Text=tostring(values[key]);render() end)
     table.insert(bindings,render);render()
     return box
@@ -1516,7 +1475,6 @@ boundButton(farmTargetCard, function() return "몬스터 선택: " .. state.sele
     table.sort(choices, function(a,b) return a.label < b.label end)
     chooser("몬스터 선택", choices, function(name) stop(nil); state.selectedMob = name end)
 end)
-local attackCard = section(pages[12], "KILL AURA  /  자동 공격")
 local attackCard = section(pages[6], "KILL AURA  /  자동 공격")
 toggle(attackCard,"Kill Aura","killAura")
 numeric(attackCard,"공격 범위 (studs)","auraRadius",2,12)
@@ -1542,18 +1500,6 @@ local farmStart = boundButton(farmTargetCard, function() return state.mode == "f
     function() if state.mode == "farm" then stop("자동사냥 정지") else start("farm") end end)
 
 farmStart.BackgroundColor3, farmStart.TextColor3 = colors.accent, colors.bg
-local bossCard = section(pages[2], "BOSS  /  원본 보스 목록 33종")
-row(bossCard, "보스 전체는 현재 로딩된 보스 중 가까운 대상을 선택합니다. 출현하지 않은 보스는 대기합니다.")
-boundButton(bossCard, function() return "선택: " .. state.selectedBoss end, function()
-    scanWorld()
-    local live = {}
-    for _, mob in ipairs(mobs) do if mob.hum.Health > 0 then live[mob.name] = true; live[mob.model.Name] = true end end
-    local choices = {{label = "[보스 전체] · 가까운 생존 보스", value = "[보스 전체]"}}
-    for _, name in ipairs(DATA.bosses) do
-        table.insert(choices, {label = (live[name] and "[출현] " or "[미확인] ") .. name, value = name})
-    end
-    chooser("보스 선택", choices, function(name) stop(nil); state.selectedBoss = name end)
-end)
 local bossCard = section(pages[1], "BOSS  /  원본 보스 목록 33종")
 row(bossCard,"보스를 누른 순서대로 목록에 추가합니다. 한 마리를 잡는 동안 다른 보스로 바꾸지 않으며, 다음에 살아 있는 선택 보스를 순환합니다.")
 local bossSelection=row(bossCard,"")
@@ -1571,35 +1517,26 @@ end
 local bossStart = boundButton(bossCard, function() return state.mode == "boss" and "보스 사냥 정지" or "보스 사냥 시작" end,
     function() if state.mode == "boss" then stop("보스 사냥 정지") else start("boss") end end)
 bossStart.BackgroundColor3, bossStart.TextColor3 = colors.accent, colors.bg
-row(pages[2], "공격 스타일은 Combat, 자세·추적 설정은 자동사냥 탭과 공유합니다. 자동 스킬도 보스 사냥에 적용됩니다.")
 row(pages[1], "공격 스타일은 Combat에서, 자세는 이 사냥 탭에서 설정합니다. 자동 스킬도 보스 사냥에 적용됩니다.")
 
-row(pages[3], "선택한 처치 퀘스트를 수락 → 사냥 → 완료 요청합니다. 레벨·선행 조건은 게임이 검사합니다.")
-boundButton(pages[3], function() return "퀘스트: " .. DATA.quests[state.questIndex].title end, function()
 row(pages[2], "선택한 처치 퀘스트를 수락 → 사냥 → 완료 요청합니다. 레벨·선행 조건은 게임이 검사합니다.")
 boundButton(pages[2], function() return "퀘스트: " .. DATA.quests[state.questIndex].title end, function()
     local choices = {}
     for index, q in ipairs(DATA.quests) do table.insert(choices, {label = "Lv " .. q.level .. " | " .. q.title .. " | " .. q.npc, value = index}) end
     chooser("처치 퀘스트 선택", choices, function(index) stop(nil); state.questIndex = index end)
 end)
-local questInfo = row(pages[3], "")
-toggle(pages[3], "완료 후 같은 퀘스트 반복", "repeatQuest")
-boundButton(pages[3], function() return state.mode == "quest" and "퀘스트 자동화 정지" or "퀘스트 자동화 시작" end,
 local questInfo = row(pages[2], "")
 toggle(pages[2], "완료 후 같은 퀘스트 반복", "repeatQuest")
 boundButton(pages[2], function() return state.mode == "quest" and "퀘스트 자동화 정지" or "퀘스트 자동화 시작" end,
     function() if state.mode == "quest" then stop("퀘스트 자동화 정지") else start("quest") end end)
-row(pages[3], "배송·수집·선행 스토리 분기는 이 버전에 포함하지 않았습니다. 직접 수락한 처치 퀘스트도 이어서 진행할 수 있습니다.")
 row(pages[2], "배송·수집·선행 스토리 분기는 이 버전에 포함하지 않았습니다. 직접 수락한 처치 퀘스트도 이어서 진행할 수 있습니다.")
 
-local levelCard = section(pages[3], "AUTO LEVEL FARM")
 local levelCard = section(pages[2], "AUTO LEVEL FARM")
 row(levelCard, "현재 Level 이하의 처치 퀘스트를 자동 선택합니다. 진행 중인 퀘스트를 먼저 마치고, 올라간 Level로 다시 선택하고 수락될 때까지 대화합니다.")
 local levelLabel = row(levelCard, "Level · 읽는 중")
 boundButton(levelCard, function() return state.mode == "level" and "Auto Level Farm 정지" or "Auto Level Farm 시작" end,
     function() if state.mode == "level" then stop("Auto Level Farm 정지") else start("level") end end)
 row(levelCard, "선행 조건·NPC 접근 실패 시 다른 후보를 시도합니다. 배송·스토리 선행 퀘스트까지 자동 해결하지는 않습니다.")
-local huntCard = section(pages[3], "CROW / MUZAN QUESTS")
 local huntCard = section(pages[2], "CROW / MUZAN QUESTS")
 numeric(huntCard, "Crow Toolbar Slot", "crowSlot", 1, 8, true)
 boundButton(huntCard, function() return state.mode == "crow" and "Crow Quest 정지" or "Crow Quest 시작" end,
@@ -1609,9 +1546,6 @@ boundButton(huntCard, function() return state.mode == "muzan" and "Muzan Quest �
     function() if state.mode == "muzan" then stop("Muzan Quest 정지") else start("muzan") end end)
 row(huntCard, "잠기지 않은 Hunt를 수락하고 보스를 사냥합니다. 수락 확인까지 대화를 반복합니다. Crow / Biwa Bell 슬롯을 먼저 맞추세요.")
 
-row(pages[4], "NPC·퀘스트·사냥·상자 이동을 모두 즉시 이동으로 통일했습니다.")
-row(pages[4],"모든 이동: 즉시 이동")
-boundButton(pages[4], function() return "NPC 선택: " .. state.selectedNpc end, function()
 row(pages[3], "NPC·퀘스트·사냥·상자 이동을 모두 즉시 이동으로 통일했습니다.")
 row(pages[3],"모든 이동: 즉시 이동")
 boundButton(pages[3], function() return "NPC 선택: " .. state.selectedNpc end, function()
@@ -1623,7 +1557,6 @@ boundButton(pages[3], function() return "NPC 선택: " .. state.selectedNpc end,
     table.sort(choices, function(a,b) return a.label < b.label end)
     chooser("NPC 선택", choices, function(name) state.selectedNpc = name end)
 end)
-button(pages[4], "선택한 NPC로 이동", function()
 button(pages[3], "선택한 NPC로 이동", function()
     local _, _, root = character()
     if not root then log("캐릭터가 준비되지 않았습니다."); return end
@@ -1632,10 +1565,6 @@ button(pages[3], "선택한 NPC로 이동", function()
     if point then travel(point, "NPC 이동: " .. state.selectedNpc) else log("NPC와 좌표를 찾지 못했습니다.") end
 end)
 state.x, state.y, state.z = 0, 0, 0
-local xBox = numeric(pages[4], "X 좌표", "x", -100000, 100000)
-local yBox = numeric(pages[4], "Y 좌표", "y", -100000, 100000)
-local zBox = numeric(pages[4], "Z 좌표", "z", -100000, 100000)
-button(pages[4], "현재 위치를 좌표 칸에 넣기", function()
 local xBox = numeric(pages[3], "X 좌표", "x", -100000, 100000)
 local yBox = numeric(pages[3], "Y 좌표", "y", -100000, 100000)
 local zBox = numeric(pages[3], "Z 좌표", "z", -100000, 100000)
@@ -1646,26 +1575,12 @@ button(pages[3], "현재 위치를 좌표 칸에 넣기", function()
         xBox.Text, yBox.Text, zBox.Text = string.format("%.2f",state.x), string.format("%.2f",state.y), string.format("%.2f",state.z)
     end
 end)
-button(pages[4], "입력 좌표로 이동", function() travel(Vector3.new(state.x, state.y, state.z), "좌표 이동") end)
-toggle(pages[4], "충돌 해제", "noclip")
-toggle(pages[4], "걷기 / 점프 설정 적용", "walkOverride")
-numeric(pages[4], "걷기 속도 (8–100)", "walkSpeed", 8, 100)
-numeric(pages[4], "점프 파워 (20–150)", "jumpPower", 20, 150)
 button(pages[3], "입력 좌표로 이동", function() travel(Vector3.new(state.x, state.y, state.z), "좌표 이동") end)
 toggle(pages[3], "충돌 해제", "noclip")
 toggle(pages[3], "걷기 / 점프 설정 적용", "walkOverride")
 numeric(pages[3], "걷기 속도 (8–100)", "walkSpeed", 8, 100)
 numeric(pages[3], "점프 파워 (20–150)", "jumpPower", 20, 150)
 
-local skillCard = section(pages[5], "SKILLS  /  Z · X · C · V · B · N · K")
-toggle(skillCard, "자동 스킬", "autoSkill")
-row(skillCard, "키를 켜고 재입력 간격을 정하세요. 공격 대상이 가까이 있을 때만 순서대로 입력합니다. 실제 스킬 쿨다운은 게임에서 확인하세요.")
-for _, name in ipairs(skillKeys) do
-    local key = name
-    local frame = make("Frame", {Size = UDim2.new(1, 0, 0, 40), BackgroundTransparency = 1}, skillCard)
-    local b = boundButton(frame, function() return key .. (skills[key].enabled and "    ON" or "    OFF") end, function()
-        skills[key].enabled = not skills[key].enabled
-        if not skills[key].enabled and heldSkill and heldSkill.key == key then releaseSkill() end
 local skillCard=section(pages[4],"자동 스킬 · Z / X / C / V / B / N / K")
 toggle(skillCard,"자동 스킬","autoSkill")
 row(skillCard,"키별 ON/OFF, 홀드 시간, 재입력 간격을 설정하세요. Combat의 Kill Aura가 켜져 있고 사냥 대상이 가까울 때만 순서대로 입력합니다.")
@@ -1678,30 +1593,9 @@ for _,name in ipairs(skillKeys) do
         skills[key].enabled=not skills[key].enabled
         if not skills[key].enabled and heldSkill and heldSkill.key==key then releaseSkill() end
     end)
-    b.Size = UDim2.new(0.42, 0, 1, 0)
-    local l = label(frame, "간격 (초)", UDim2.new(0.25, 0, 1, 0))
-    l.Position, l.TextColor3 = UDim2.fromScale(0.48, 0), colors.muted
-    local box = make("TextBox", {Size = UDim2.new(0.22, 0, 1, 0), Position = UDim2.fromScale(0.78, 0),
-        Text = tostring(skills[key].interval), ClearTextOnFocus = false, BackgroundColor3 = colors.card,
-        TextColor3 = colors.text, TextSize = 14, BorderSizePixel = 0}, frame)
-    connect(box.FocusLost, function()
-        local value = tonumber(box.Text)
-        if value and value == value and math.abs(value) < math.huge then skills[key].interval = math.clamp(value, 0.5, 120) end
-        box.Text = tostring(skills[key].interval)
-    end)
-    table.insert(bindings, function() b.BackgroundColor3 = skills[key].enabled and Color3.fromRGB(32, 84, 73) or colors.card end)
     numeric(card,"홀드 시간 (초)","hold",0.05,5,false,skills[key])
     numeric(card,"재입력 간격 (초)","interval",0.05,120,false,skills[key])
 end
-local inputCard = section(pages[5], "INPUT  /  키 입력")
-cycle(inputCard, "입력 방식", "skillBackend", {"자동", "VirtualInputManager", "실행기 키 입력"})
-slider(inputCard, "스킬 홀드 시간", "skillHold", 0.05, 5)
-numeric(inputCard, "스킬 사이 최소 간격 (초)", "skillGap", 0.2, 5)
-row(inputCard, "채팅·검색 입력 중에는 스킬을 멈춥니다. 정지·사망·종료 시 누르고 있던 키를 해제합니다.")
-
-toggle(pages[6], "리스폰 후 자동화 재개", "autoResume")
-local diagnostics = row(pages[6], "")
-button(pages[6], "게임 구조 다시 확인", function()
 toggle(pages[5], "리스폰 후 자동화 재개", "autoResume")
 local diagnostics = row(pages[5], "")
 button(pages[5], "게임 구조 다시 확인", function()
@@ -1713,11 +1607,6 @@ button(pages[5], "게임 구조 다시 확인", function()
         " / firesignal: " .. tostring(type(firesignal) == "function")
     log("구조 확인 완료. Event 존재가 서버 동작 성공을 뜻하지는 않습니다.")
 end)
-row(pages[6], "RightShift: 창 표시 / 숨김 · End: 전체 정지\n외부 다운로드·웹훅·파일 쓰기 없음. 실제 게임 실행 검증은 아직 하지 않았습니다.")
-local logLabel = row(pages[6], "")
-local defenseCard = section(pages[7], "PARRY  /  확인 결과")
-row(defenseCard, "Auto Parry / Infinite Parry: 현재 미지원. 원본 AutoParry는 프리미엄 안내만 호출하며 Blocking 모듈 내용·패링 조건은 덤프에 없습니다.")
-local miscCard = section(pages[8], "MISC  /  보조 기능")
 row(pages[5], "RightShift: 창 표시 / 숨김 · End: 전체 정지\n외부 다운로드·웹훅·파일 쓰기 없음. 실제 게임 실행 검증은 아직 하지 않았습니다.")
 local logLabel = row(pages[5], "")
 local miscCard = section(pages[5], "MISC  /  보조 기능")
@@ -1757,7 +1646,6 @@ connect(Input.InputBegan, function(input, processed)
     if input.KeyCode == Enum.KeyCode.End then stop("전체 정지: 이동 설정도 복원했습니다.", true)
     elseif not processed and input.KeyCode == Enum.KeyCode.RightShift then panel.Visible = not panel.Visible end
 end)
-connect(Input.WindowFocusReleased, function() windowActive = false; releaseSkill(); releaseLoot(); releaseMouse() end)
 connect(Input.WindowFocusReleased, function() windowActive = false; releaseSkill(); releaseLoot(); releaseFishing(); releaseMouse() end)
 connect(Input.WindowFocused, function() windowActive = true end)
 connect(player.CharacterRemoving, function()
@@ -1813,7 +1701,6 @@ connect(RunService.Stepped, function()
         else hum.JumpHeight = state.jumpPower * state.jumpPower / (2 * math.max(workspace.Gravity, 1)) end
     end
 end)
-local espCard=section(pages[9],"ESP · 현재 불러와진 대상")
 local espCard=section(pages[7],"ESP · 현재 불러와진 대상")
 toggle(espCard,"ESP 전체","espEnabled")
 numeric(espCard,"최대 거리 (studs)","espDistance",50,50000,true)
@@ -1821,14 +1708,6 @@ row(espCard,"거리와 이름을 표시합니다. 미공개 Breathing / Level / 
 for _,name in ipairs({"Player","Boss","Monster","NPC","Muzan","Spider Lily"}) do
     local group=name
     boundButton(espCard,function() return group..": "..(espGroups[group] and "켜짐" or "꺼짐") end,function() espGroups[group]=not espGroups[group] end)
-    local box=make("TextBox",{Size=UDim2.new(1,0,0,34),Text=table.concat(espColors[group],", "),PlaceholderText=group.." RGB: 0–255, 0–255, 0–255",ClearTextOnFocus=false,TextSize=14,TextColor3=colors.text,BackgroundColor3=colors.card},espCard)
-    connect(box.FocusLost,function()
-        local r,g,b=box.Text:match("^%s*(%d+)%s*,%s*(%d+)%s*,%s*(%d+)%s*$")
-        r,g,b=tonumber(r),tonumber(g),tonumber(b)
-        if r and g and b and r<=255 and g<=255 and b<=255 then espColors[group]={r,g,b}
-        else log("RGB를 0–255 숫자 세 개로 입력하세요.") end
-        box.Text=table.concat(espColors[group],", ")
-    end)
     for index,label in ipairs({"R","G","B"}) do numeric(espCard,group.." · "..label,index,0,255,true,espColors[group]) end
 end
 button(espCard,"Roaming Muzan · 현재 위치로 텔레포트",function()
@@ -1847,7 +1726,6 @@ button(espCard,"Roaming Muzan · 현재 위치로 텔레포트",function()
     root.CFrame=CFrame.new(nearest.root.Position+Vector3.new(3,0,0),nearest.root.Position)
     log("Roaming Muzan의 현재 위치로 이동했습니다.")
 end)
-local gearCard=section(pages[10],"Nightfall / Firstlight · Schematic")
 local gearCard=section(pages[8],"Nightfall / Firstlight · Schematic")
 row(gearCard,"완성 장비 지급이 아닌 설계도 수집입니다. 선행 아이템·단서가 필요하며, 내 Inventory에 설계도가 생겨야 획득 완료로 표시합니다. 각 항목의 자동 수집은 기존 사냥을 정지합니다.")
 for _,entry in ipairs(gear) do
@@ -1856,7 +1734,6 @@ for _,entry in ipairs(gear) do
     button(gearCard,item.name.." · Schematic 자동 수집",function() beginActivity("schematic",item) end)
 end
 row(gearCard,"Firstlight Bottom / Nightfall Bottom: 이 자료에서는 위치와 획득 절차를 확인하지 못했습니다. War Fans는 WarFansClue_4 + Shovel, Tanto는 Shovel + Mushroom Lit Lantern 착용이 필요합니다.")
-local trainingCard=section(pages[11],"Training · 실험 기능")
 local trainingCard=section(pages[9],"Training · 실험 기능")
 row(trainingCard,"로드된 훈련 시설로 이동하고 시작한 후 원본의 완료 요청을 1회 보냅니다. 서버가 수락하는지와 실제 진행도는 게임에서 확인해야 합니다. 다른 미니게임을 종료한 후 사용하세요.")
 for _,name in ipairs(trainings) do
@@ -1865,7 +1742,6 @@ for _,name in ipairs(trainings) do
 end
 row(trainingCard,"Auto Breathing / Auto Become Demon / Auto Demon Art: 원본에 전체 실행 코드가 없어 지원하지 않습니다. 훈련 버튼만으로 능력 획득까지 완료되지는 않습니다.")
 
-local lootCard=section(pages[13],"상자 열기 + 떨어진 아이템 수집")
 local lootCard=section(pages[10],"상자 열기 + 떨어진 아이템 수집")
 toggle(lootCard,"상자 / 아이템 자동 수집","autoLoot")
 numeric(lootCard,"탐색 반경 (studs)","lootRadius",10,50000,true)
@@ -1924,7 +1800,6 @@ connect(RunService.Heartbeat, function(dt)
         if not lootBusy and state.mode ~= "idle" then
             if not character() then state.phase = "캐릭터 대기"
             elseif state.mode == "farm" then farm(state.selectedMob, elapsed)
-            elseif state.mode == "boss" then farm(state.selectedBoss, elapsed)
             elseif state.mode == "boss" then bossTick(elapsed)
             elseif state.mode == "fishing" then fishingTick()
             elseif state.mode == "quest" or state.mode == "level" then questTick(elapsed)
@@ -1948,6 +1823,5 @@ connect(RunService.Heartbeat, function(dt)
         stop("실행 오류: " .. tostring(problem), true)
     end
 end)
-log("준비 완료. 상태 탭에서 구조를 확인하고 Kill Aura 탭에서 무기를 맞추고 켠 뒤 시작하세요.")
 log("준비 완료. 상태 탭에서 구조를 확인하고 Combat 탭에서 무기를 맞추고 켠 뒤 시작하세요.")
 refreshUI()
