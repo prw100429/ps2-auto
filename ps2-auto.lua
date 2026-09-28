@@ -1,4 +1,4 @@
--- PRW / Project Slayers 2 v7.0
+-- PRW / Project Slayers 2 v8.0
 -- Generated full file. Replace the GitHub file entirely.
 local DATA = {["quests"] = {{["key"] = "Ill take 3 bandits", ["npc"] = "Krue", ["mob"] = "Bandit", ["title"] = "Defeat 3 bandits", ["level"] = 0}, {["key"] = "Ill take the bandit boss(Lv 7)", ["npc"] = "Krue", ["mob"] = "Zuko", ["title"] = "Defeat the bandit boss", ["level"] = 7}, {["key"] = "Ill drive the bears back(Lv 10)", ["npc"] = "Tom", ["mob"] = "Bear Cub", ["title"] = "Hunt the Bears", ["level"] = 10}, {["key"] = "Ill restock the pantry(Lv 10)", ["npc"] = "Lucy", ["mob"] = "Bear Cub", ["title"] = "Acquire Bear Meat", ["level"] = 10}, {["key"] = "Ill fell the Mother Bear(Lv 18)", ["npc"] = "Tom", ["mob"] = "Mother Bear", ["title"] = "Fell the Mother Bear", ["level"] = 18}, {["key"] = "Ill clear out his subordinates(Lv 26)", ["npc"] = "Chaka", ["mob"] = "Kaiden Subordinate", ["title"] = "Clear Kaiden's Subordinates", ["level"] = 26}, {["key"] = "Ill help clear them out", ["npc"] = "Kazu", ["mob"] = "*Civilian*", ["title"] = "Clear Village Spies", ["level"] = 26}, {["key"] = "Ill deal with Kaiden(Lv 34)", ["npc"] = "Chaka", ["mob"] = "Kaiden", ["title"] = "Defeat Kaiden", ["level"] = 34}, {["key"] = "I will clear out his guards(Lv 40)", ["npc"] = "Wagwan", ["mob"] = "Hoyuzo Subordinate", ["title"] = "Clear Hoyuzo's Guard", ["level"] = 40}, {["key"] = "Ill drive them off(Lv 47)", ["npc"] = "Rin", ["mob"] = "Beast Born Demon", ["title"] = "Hold the Night", ["level"] = 47}, {["key"] = "I will take care of Hoyuzo(Lv 50)", ["npc"] = "Wagwan", ["mob"] = "Hoyuzo", ["title"] = "Eliminate Hoyuzo", ["level"] = 50}, {["key"] = "Ill help you defeat them(Lv 90)", ["npc"] = "Wounded Slayer Tomoi", ["mob"] = "Fire Profound Demon", ["title"] = "Drive Off High Demons", ["level"] = 90}, {["key"] = "Theyre not welcome here(Lv 90)", ["npc"] = "Demon Delroy", ["mob"] = "High Demon", ["title"] = "Thin Kanoe Ranks", ["level"] = 90}, {["key"] = "Ill drive back the frost(Lv 105)", ["npc"] = "Demon Slayer Mitsu", ["mob"] = "Ice Profound Demon", ["title"] = "Drive Back the Frost", ["level"] = 105}, {["key"] = "Ill put out the blaze(Lv 115)", ["npc"] = "Demon Slayer Mitsu", ["mob"] = "Fire Profound Demon", ["title"] = "Put Out the Blaze", ["level"] = 115}}, ["npcs"] = {["Angler Runo"] = {-561.0, 796.0, 684.0}, ["Betty"] = {714.0, 1121.0, -808.0}, ["Blacksmith Togane"] = {1732.0, 694.0, -765.0}, ["Chaka"] = {471.0, 1146.0, -1260.0}, ["Demon Delroy"] = {140.0, 1254.0, -1911.0}, ["Demon Mokuro"] = {-1948.0, 28.0, 374.0}, ["Demon Slayer Goro"] = {-872.0, 235.0, 318.0}, ["Demon Slayer Mitsu"] = {-824.0, 1382.0, -2538.0}, ["Dock Master Sofen"] = {-161.0, 796.0, 703.0}, ["Elara"] = {428.0, 941.0, 507.0}, ["Estate Worker Niko"] = {374.0, 942.0, 523.0}, ["Flame Trainer Rengu"] = {-968.0, 1029.0, 1188.0}, ["Ginzo"] = {274.0, 942.0, 528.0}, ["Harvester of Souls Zurinyz"] = {-1213.0, 1387.0, -2372.0}, ["Iceveil Guard Shiro"] = {-107.0, 1349.0, -2499.0}, ["Insect Trainer Shinora"] = {-1799.0, 348.0, -189.0}, ["Jugg"] = {488.0, 874.0, 1008.0}, ["Kazu"] = {-626.0, 1242.0, -1138.0}, ["Krue"] = {-425.0, 1244.0, -952.0}, ["Lamplighter Isamu"] = {1082.0, 1426.0, -749.0}, ["Liv"] = {657.0, 1019.0, 140.0}, ["Lucy"] = {-615.0, 1258.0, -1177.0}, ["MoldySugar"] = {-702.0, 1243.0, -983.0}, ["Noote"] = {-516.0, 1243.0, -1251.0}, ["Ren"] = {-1795.0, 312.0, -85.0}, ["Rin"] = {432.0, 1018.0, 73.0}, ["Serpent Trainer Obari"] = {37.0, 1311.0, -1180.0}, ["Shady Individual Rooyi"] = {-773.0, 965.0, -9.0}, ["Shiori"] = {-1814.0, 312.0, -101.0}, ["Shrine Messenger Akio"] = {-207.0, 1350.0, -2423.0}, ["Soryu Expert Kazuma"] = {-769.0, 909.0, 303.0}, ["Sound Trainer Tengai"] = {465.0, 1491.0, -3273.0}, ["Stone Trainer Gyorei"] = {2579.0, 1096.0, -828.0}, ["Tai Chi Expert Renjiro"] = {1883.0, 687.0, -761.0}, ["Thunder Trainer Zentaro"] = {1970.0, 1660.0, -610.0}, ["Tom"] = {507.0, 1121.0, -970.0}, ["Wagwan"] = {724.0, 1019.0, -802.0}, ["Water Trainer Urokodaki"] = {667.0, 1023.0, -228.0}, ["Wind Trainer Saneri"] = {-276.0, 1187.0, -3437.0}, ["Wounded Slayer Tomoi"] = {485.0, 1223.0, -1813.0}, ["Kona"] = {-791.61, 1262.57, -1130.91}, ["Raze"] = {-594.0, 1245.08, -1095.0}, ["Rika"] = {-497.04, 1249.66, -1176.81}, ["Togane"] = {388.0, 1253.0, -1928.0}}, ["spawns"] = {["Civilian"] = {170.0, 888.0, 603.0}, ["Fire Profound Demon"] = {-916.0, 1374.0, -2431.0}, ["Greater Demon"] = {-499.0, 284.0, 528.0}, ["Hoyuzo Subordinate"] = {533.0, 1001.0, -1357.0}, ["Mizunoe Demon Slayer"] = {-1835.0, 31.0, 487.0}, ["Mother Bear"] = {540.0, 1121.0, -1024.0}, ["Zuko"] = {-297.0, 1224.0, -1023.0}, ["Giyen"] = {388.0, 1018.0, -86.0}, ["Gyorei"] = {2574.0, 1089.0, -743.0}, ["Gyutai"] = {-267.0, 1043.0, -1140.0}, ["Insect Trainee"] = {-1396.0, 261.0, 69.0}, ["Nezura"] = {-1460.0, 275.0, 935.0}, ["Obari"] = {770.0, 1121.0, -1047.0}, ["Reaper Trainee Kuzan"] = {-1220.0, 1373.0, -3035.0}, ["Rengu"] = {-713.0, 965.0, 883.0}, ["Saneri"] = {-380.0, 1093.0, -423.0}, ["Serpent Trainee"] = {-272.0, 1292.0, -1536.0}, ["Shinora"] = {-453.0, 964.0, 2.0}, ["Soryu Trainee Goki"] = {-427.0, 288.0, 543.0}, ["Sound Trainee"] = {192.0, 1349.0, -2582.0}, ["Stone Trainee"] = {2685.0, 1073.0, -569.0}, ["Sumari"] = {396.0, 1018.0, -621.0}, ["Tai Chi Trainee Suzume"] = {2360.0, 601.0, -643.0}, ["Tengai"] = {-134.0, 1349.0, -2632.0}, ["Thunder Trainee"] = {2425.0, 1073.0, -557.0}, ["Water Trainee Sabito"] = {815.0, 1018.0, 101.0}, ["Wind Trainee"] = {-942.0, 1381.0, -2636.0}, ["Yahari"] = {825.0, 1019.0, -642.0}, ["Zentaro"] = {1332.0, 821.0, -1018.0}, ["Akazo"] = {-1132.0, 1380.0, -1747.0}, ["Domae"] = {-297.0, 1350.0, -3452.0}, ["Enru"] = {821.0, 800.0, 543.0}, ["Flame Trainee"] = {-1129.0, 1029.0, 994.0}, ["Fujiko"] = {-2460.0, 37.0, 1119.0}, ["Hoyuzo"] = {746.0, 1001.0, -1413.0}, ["Reaper"] = {98.0, 1043.0, -574.0}}, ["mobs"] = {"*Civilian*", "Akazo", "Bandit", "Bear Cub", "Beast Born Demon", "Blood Hounded Demon", "Cache Lancer", "Cache Prowler", "Civilian", "Datai", "Domae", "Enru", "Fire Profound Demon", "Flame Trainee", "Fujiko", "Giyen", "Greater Demon", "Grove Raider", "Gyorei", "Gyutai", "High Demon", "Hoyuzo", "Hoyuzo Subordinate", "Ice Profound Demon", "Insect Trainee", "Kaiden", "Kaiden Subordinate", "Kanoe Demon Slayer", "Lancer Captain", "Lesser Demon", "Mizunoe Demon Slayer", "Mizunoto", "Mother Bear", "Nezura", "Obari", "Prowler Captain", "Raid Captain", "Reaper", "Reaper Trainee Kuzan", "Rengu", "Saneri", "Serpent Trainee", "Shinora", "Soryu Trainee Goki", "Sound Trainee", "Stone Trainee", "Sumari", "Tai Chi Trainee Suzume", "Tengai", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Yahari", "Zentaro", "Zuko"}, ["bosses"] = {"Akazo", "Datai", "Domae", "Enru", "Flame Trainee", "Fujiko", "Giyen", "Gyorei", "Gyutai", "Hoyuzo", "Insect Trainee", "Kaiden", "Mother Bear", "Nezura", "Obari", "Reaper", "Reaper Trainee Kuzan", "Rengu", "Saneri", "Serpent Trainee", "Shinora", "Soryu Trainee Goki", "Sound Trainee", "Stone Trainee", "Sumari", "Tai Chi Trainee Suzume", "Tengai", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Yahari", "Zentaro", "Zuko"}, ["hunts"] = {["crow"] = {"Mother Bear", "Hoyuzo", "Soryu Trainee Goki", "Reaper Trainee Kuzan", "Datai", "Domae", "Sumari", "Yahari", "Enru", "Nezura", "Gyutai", "Akazo", "Reaper"}, ["muzan"] = {"Flame Trainee", "Thunder Trainee", "Water Trainee Sabito", "Wind Trainee", "Stone Trainee", "Serpent Trainee", "Insect Trainee", "Sound Trainee", "Tai Chi Trainee Suzume", "Obari", "Tengai", "Shinora", "Rengu", "Saneri", "Gyorei", "Zentaro", "Giyen", "Gyutai", "Datai"}}}
 
@@ -17,7 +17,6 @@ if type(previous) == "table" and type(previous.Unload) == "function" then previo
 
 local state = {
     bossOrder={"Zuko"}, bossCursor=0, bossCurrent=nil, bossIndex=nil, optimize=false, fishSlot=4, fishSpot=1, fishPickup=false,
-    finishEnabled=false, finishRadius=100, finishPercent=25, finishTarget=nil,
     killAura = false, auraRadius = 12, autoLoot = false, lootRadius = 150,
     alive = true, mode = "idle", phase = "대기", selectedMob = "Bandit", generation = 0,
     questIndex = 1, selectedNpc = "Krue", style = "Combat", moveMethod = "즉시 이동",
@@ -123,7 +122,6 @@ local function stop(message, emergency)
     restoreTracking()
     state.mode, state.target, state.destination = "idle", nil, nil
     state.bossCurrent,state.bossIndex=nil,nil
-    state.finishTarget=nil
     state.questStep, state.phase = "", "대기"
     state.cooldownUntil, state.questSeen, state.missingSince = 0, false, nil
     state.levelChoice, state.hunt = nil, nil
@@ -131,7 +129,6 @@ local function stop(message, emergency)
         state.espEnabled = false; clearESP()
         state.autoSkill = false
         state.killAura, state.autoLoot = false, false
-        state.finishEnabled=false
         state.optimize,state.fishPickup=false,false;restorePerformance()
         state.antiAFK, state.noSunLocal = false, false
         restoreExtras()
@@ -224,6 +221,7 @@ local function nearestMob(name, origin)
         local isBoss = bossSet[mob.name] or bossSet[mob.model.Name]
         local matches = (name == "[전체]" and not isBoss) or (name == "[보스 전체]" and isBoss)
             or mob.name == name or mob.model.Name == name
+            or (name=="*Civilian*" and (mob.name:find("Civilian",1,true) or mob.model.Name:find("Civilian",1,true)))
         if matches and mob.model.Parent
             and mob.root.Parent and mob.hum.Health > 0 then
             local d = (mob.root.Position - origin).Magnitude
@@ -288,7 +286,8 @@ local function farm(name, dt)
     if not target or not target.model.Parent or not target.root.Parent or target.hum.Health <= 0
         or not ((name == "[전체]" and not (bossSet[target.name] or bossSet[target.model.Name]))
             or (name == "[보스 전체]" and (bossSet[target.name] or bossSet[target.model.Name]))
-            or target.name == name or target.model.Name == name) then
+            or target.name == name or target.model.Name == name
+            or (name=="*Civilian*" and (target.name:find("Civilian",1,true) or target.model.Name:find("Civilian",1,true)))) then
         target = nearestMob(name, root.Position)
         state.target = target
     end
@@ -332,39 +331,8 @@ local function bossTick(dt)
     state.phase="선택한 보스의 스폰을 기다립니다."
 end
 
-local function finishEligible(target,origin)
-    if not target or not target.model.Parent or not target.root.Parent then return false end
-    if target.model==player.Character or Players:GetPlayerFromCharacter(target.model) then return false end
-    local health,maximum=target.hum.Health,target.hum.MaxHealth
-    if type(maximum)~="number" or maximum<=0 or maximum==math.huge or maximum~=maximum then return false end
-    if type(health)~="number" or health<=0 or health~=health then return false end
-    return health/maximum*100<=state.finishPercent and (target.root.Position-origin).Magnitude<=state.finishRadius
-end
-local function finishTick()
-    local _,_,root=character()
-    if not state.finishEnabled or not state.killAura or lootBusy or not root then state.finishTarget=nil;return end
-    if state.mode~="idle" then
-        local fighting=state.mode=="farm" or state.mode=="boss" or ((state.mode=="quest" or state.mode=="level" or state.mode=="crow" or state.mode=="muzan") and state.questStep=="active")
-        state.finishTarget=fighting and finishEligible(state.target,root.Position) and state.target or nil
-        return
-    end
-    if finishEligible(state.finishTarget,root.Position) then return end
-    local best,percent,distance
-    for _,candidate in ipairs(mobs) do
-        if finishEligible(candidate,root.Position) then
-            local hp=candidate.hum.Health/candidate.hum.MaxHealth
-            local d=(candidate.root.Position-root.Position).Magnitude
-            if not best or hp<percent or (hp==percent and d<distance) then best,percent,distance=candidate,hp,d end
-        end
-    end
-    state.finishTarget=best
-    if best then state.phase="PRW 마무리 · "..best.name end
-end
-
 local function trackingTarget()
     if not state.killAura or lootBusy then return nil end
-    local _,_,root=character()
-    if state.finishEnabled and root and finishEligible(state.finishTarget,root.Position) then return state.finishTarget end
     if not (state.mode == "farm" or state.mode == "boss" or ((state.mode == "quest" or state.mode == "level" or state.mode == "crow" or state.mode == "muzan") and state.questStep == "active")) then return nil end
     local target = state.target
     if target and target.root.Parent and target.model.Parent and target.hum.Health > 0 then return target end
@@ -447,7 +415,7 @@ local function skillFrame()
     local now = os.clock()
     local target = trackingTarget()
     local _, _, root = character()
-    local allowed = state.killAura and not state.finishTarget and not lootBusy and windowActive and state.autoSkill and target and root and (root.Position - target.root.Position).Magnitude <= 12
+    local allowed = state.killAura and not lootBusy and windowActive and state.autoSkill and target and root and (root.Position - target.root.Position).Magnitude <= 12
         and not Input:GetFocusedTextBox()
     if heldSkill then
         if not allowed or not skills[heldSkill.key].enabled or now >= heldSkill.untilTime then releaseSkill() end
@@ -557,6 +525,63 @@ local function readLevel()
     end
     return nil
 end
+local story26 = {
+    {key="Ill help clear them out",title="Clear Village Spies",npc="Kazu",mob="*Civilian*",level=26,story=true},
+    {key="Ill bring him the notes",title="Bring the Notes",npc="Noote",talkTo="Noote",level=26,story=true},
+    {key="Ill get this letter delivered",title="Deliver the Letter",npc="Noote",talkTo="Chaka",talkBtn="Hand over the letter",level=26,story=true},
+}
+for _,q in ipairs(story26) do
+    for i,existing in ipairs(DATA.quests) do if existing.key==q.key then q.index=i;DATA.quests[i]=q;break end end
+    if not q.index then table.insert(DATA.quests,q);q.index=#DATA.quests end
+end
+local questModule
+local function storyDone(key)
+    if not questModule then
+        local module=path(RS,{"CAM","Global","Subsets","Gameplay","Quests"})
+        if not module then return nil end
+        local ok,result=pcall(require,module)
+        if not ok or type(result)~="table" or type(result.GetPlayerQuestState)~="function" then return nil end
+        questModule=result
+    end
+    local ok,result=pcall(questModule.GetPlayerQuestState,player,key)
+    if not ok then return nil end
+    return result=="Done"
+end
+local function story26Choice()
+    local delivered=storyDone(story26[3].key)
+    local notesDone=storyDone(story26[2].key)
+    if delivered==nil or notesDone==nil then return nil,"Level 26 선행 퀘스트 상태를 읽지 못했습니다." end
+    if delivered then return false end
+    if notesDone then return story26[3].index end
+    local data=path(RS,{"Player_Service","Data",player.Name})
+    local slot=valueOf(data,"slotEquipped")
+    local inventory=slot~=nil and path(data,{"slots","Slot"..tostring(slot),"Inventory","Inventory"})
+    if not inventory then return nil,"Suspicious Note 보유 여부를 확인할 수 없습니다." end
+    if inventory:FindFirstChild("Suspicious Note") then return story26[2].index end
+    return story26[1].index
+end
+local function storyTalk(q,dt)
+    local now,generation=os.clock(),state.generation
+    state.target=nil;releaseSkill();restoreTracking()
+    local _,_,root=character()
+    if not root then return end
+    if now-state.lastAction<0.9 then return end
+    if q.talkBtn and dialogueChoice(q.talkBtn) then state.lastAction=now;return end
+    local npc=findNpc(q.talkTo,root.Position)
+    local at=npc and npc.root.Position or fallback(q.talkTo,DATA.npcs)
+    if not at then state.phase="NPC 로딩 대기 · "..q.talkTo;return end
+    moveTo(at+Vector3.new(0,0,4),dt,at)
+    if npc and (root.Position-npc.root.Position).Magnitude<=8 then
+        local prompt=npc.instance:FindFirstChildWhichIsA("ProximityPrompt",true)
+        if prompt and prompt.Enabled and type(fireproximityprompt)=="function" then
+            state.lastAction=now
+            fireproximityprompt(prompt,prompt.HoldDuration)
+            if state.generation~=generation then return end
+        end
+    end
+    state.phase="Level 26 · "..q.title.." → "..q.talkTo
+end
+
 local function chooseLevelQuest()
     local level = readLevel()
     if not level then return nil, "Level을 읽을 수 없습니다. 캐릭터 HUD 로딩을 기다립니다." end
@@ -570,12 +595,16 @@ local function chooseLevelQuest()
             return index
         end
     end
+    if level>=26 and level<40 then
+        local index,problem=story26Choice()
+        if index~=false then return index,problem end
+    end
     local best
     local _, _, root = character()
     for index, q in ipairs(DATA.quests) do
         local blocked = (state.levelBlocked[q.key] or 0) > os.clock()
         local availableBoss = not bossSet[q.mob] or (root and nearestMob(q.mob, root.Position))
-        if q.level <= level and not blocked and availableBoss and (not best or q.level > DATA.quests[best].level) then best = index end
+        if not q.story and q.level <= level and not blocked and availableBoss and (not best or q.level > DATA.quests[best].level) then best = index end
     end
     return best, best and nil or "현재 수락 가능한 Level Farm 후보를 기다립니다."
 end
@@ -614,6 +643,10 @@ local function questTick(dt)
         log("Level Farm → " .. DATA.quests[index].title)
     end
     local q = DATA.quests[state.mode == "level" and state.levelChoice or state.questIndex]
+    if q.story and q.talkTo and storyDone(q.key)==true then
+        if state.mode=="quest" then stop("완료 확인: "..q.title) else finishQuestCycle() end
+        return
+    end
     local status, problem = questStatus(q)
     if not status then
         state.target = nil
@@ -626,6 +659,7 @@ local function questTick(dt)
         state.questSeen, state.missingSince = true, nil
         if not status.complete then
             if state.completedObserved then finishQuestCycle(); return end
+            if q.talkTo then state.questStep="storyTalk";storyTalk(q,dt);return end
             state.questStep, state.actionCount = "active", 0
             farm(q.mob, dt)
             state.phase = q.title .. " · " .. status.progress
@@ -654,6 +688,16 @@ local function questTick(dt)
         if now - state.missingSince >= 1 then finishQuestCycle() end
         return
     end
+    if now-state.lastAction>=0.2 then
+        local holder=path(playerGui,{"ComponentsHolder","DialogueFrame","Actual","ButtonHolder",q.key})
+        local button=holder and holder:FindFirstChild("TextButton")
+        if button and visible(button) and clickButton(button) then
+            if state.generation~=generation then return end
+            state.questStep,state.questDeadline,state.lastAction,state.actionCount="dialogue",now+2,now,1
+            state.phase="Quest 수락 확인 · "..q.title
+            return
+        end
+    end
     if state.questStep ~= "seek" and state.questStep ~= "dialogue" then
         state.questStep, state.questDeadline, state.actionCount = "seek", now + 90, 0
         state.target = nil
@@ -673,10 +717,10 @@ local function questTick(dt)
             end
             fireproximityprompt(prompt, prompt.HoldDuration)
             if not state.alive or state.generation ~= generation then return end
-            state.questStep, state.questDeadline, state.lastAction = "dialogue", now + 2, now
+            state.questStep, state.questDeadline, state.lastAction = "dialogue", now + 2, now - 0.2
             haltMotion()
         end
-    elseif now - state.lastAction > 0.8 then
+    elseif now - state.lastAction >= 0.2 then
         if state.actionCount == 0 then
             local chosen = dialogueChoice(q.key)
             if not state.alive or state.generation ~= generation then return end
@@ -1306,9 +1350,9 @@ end
 
 
 -- Local Roblox UI; no downloaded library, assets, files, clipboard or telemetry.
-local colors = {bg = Color3.fromRGB(12, 16, 27), card = Color3.fromRGB(25, 34, 53),
-    accent = Color3.fromRGB(116, 171, 255), text = Color3.fromRGB(239, 244, 255), muted = Color3.fromRGB(151, 170, 201),
-    selected = Color3.fromRGB(40, 63, 105), stroke = Color3.fromRGB(47, 64, 90), mint=Color3.fromRGB(112,232,194)}
+local colors = {bg = Color3.fromRGB(19, 12, 30), card = Color3.fromRGB(43, 28, 62),
+    accent = Color3.fromRGB(186, 139, 255), text = Color3.fromRGB(246, 240, 255), muted = Color3.fromRGB(183, 163, 210),
+    selected = Color3.fromRGB(86, 48, 126), stroke = Color3.fromRGB(87, 59, 116), mint=Color3.fromRGB(217,177,255)}
 local function make(class, props, parent)
     local instance = Instance.new(class)
     for k, v in pairs(props) do instance[k] = v end
@@ -1338,9 +1382,9 @@ local function button(parent, text, callback)
     end)
     return b
 end
-local brandBand=make("Frame",{Size=UDim2.new(1,-2,0,58),Position=UDim2.fromOffset(1,1),BackgroundColor3=Color3.fromRGB(36,51,86),BorderSizePixel=0},panel)
+local brandBand=make("Frame",{Size=UDim2.new(1,-2,0,58),Position=UDim2.fromOffset(1,1),BackgroundColor3=Color3.fromRGB(63,34,95),BorderSizePixel=0},panel)
 make("UICorner",{CornerRadius=UDim.new(0,15)},brandBand)
-make("UIGradient",{Color=ColorSequence.new(Color3.fromRGB(48,69,123),Color3.fromRGB(20,26,43)),Rotation=12},brandBand)
+make("UIGradient",{Color=ColorSequence.new(Color3.fromRGB(116,61,169),Color3.fromRGB(35,20,55)),Rotation=12},brandBand)
 local header = label(panel, "   PRW  /  SLAYERS", UDim2.new(1, -190, 0, 50))
 header.TextSize = 21
 header.Font = Enum.Font.GothamBold
@@ -1358,8 +1402,8 @@ local statusLabel = label(panel, "", UDim2.new(1, -252, 0, 42))
 statusLabel.Position = UDim2.new(0, 16, 1, -53)
 statusLabel.TextSize = 12
 make("Frame", {Position = UDim2.fromOffset(166, 74), Size = UDim2.new(0, 1, 1, -146),
-    BackgroundColor3 = Color3.fromRGB(42, 51, 65), BorderSizePixel = 0}, panel)
-local badge = label(panel, "PRW  /  v7.0", UDim2.fromOffset(148, 22))
+    BackgroundColor3 = Color3.fromRGB(74, 46, 96), BorderSizePixel = 0}, panel)
+local badge = label(panel, "PRW  /  v8.0", UDim2.fromOffset(148, 22))
 badge.Position, badge.TextSize, badge.TextColor3 = UDim2.fromOffset(18, 64), 11, colors.mint
 badge.Font=Enum.Font.GothamBold
 local pageTitle = label(panel, "사냥", UDim2.new(1, -204, 0, 34))
@@ -1412,8 +1456,7 @@ local function toggle(parent, title, key)
     return boundButton(parent, function() return (state[key] and "●  " or "○  ") .. title .. (state[key] and "   ON" or "   OFF") end, function()
         state[key] = not state[key]
         if key == "autoSkill" and not state[key] then releaseSkill() end
-        if key == "killAura" and not state[key] then releaseSkill();restoreTracking();state.target=nil;state.finishTarget=nil end
-        if key=="finishEnabled" and not state[key] then state.finishTarget=nil;restoreTracking() end
+        if key == "killAura" and not state[key] then releaseSkill();restoreTracking();state.target=nil end
         if key == "autoLoot" and not state[key] then releaseLoot() end
         if key == "fishPickup" and not state[key] and state.mode~="fishing" then releaseLoot() end
         if key == "noSunLocal" and not state[key] then restoreExtras() end
@@ -1423,7 +1466,7 @@ local function toggle(parent, title, key)
 end
 local function section(parent, title)
     local frame = make("Frame", {Size = UDim2.new(1, 0, 0, 0), AutomaticSize = Enum.AutomaticSize.Y,
-        BackgroundColor3 = Color3.fromRGB(18, 25, 40), BorderSizePixel = 0}, parent)
+        BackgroundColor3 = Color3.fromRGB(30, 19, 45), BorderSizePixel = 0}, parent)
     make("UICorner", {CornerRadius = UDim.new(0, 12)}, frame)
     make("UIStroke",{Color=colors.stroke,Thickness=1,Transparency=0.4},frame)
     make("UIPadding", {PaddingTop = UDim.new(0, 12), PaddingBottom = UDim.new(0, 12),
@@ -1536,12 +1579,6 @@ boundButton(attackCard, function() return "전투 스타일: " .. state.style en
     end
     chooser("실제로 사용하는 스타일 선택", choices, function(name) state.style = name end)
 end)
-local finishCard=section(pages[6],"PRW INSTAKILL  /  일반 공격 마무리")
-toggle(finishCard,"체력 조건 마무리","finishEnabled")
-numeric(finishCard,"대상 탐색 거리 (studs)","finishRadius",10,500,true)
-numeric(finishCard,"남은 체력 기준 (%)","finishPercent",1,100,true)
-row(finishCard,"즉사를 보장하지 않습니다. Kill Aura가 켜져 있으면 설정 체력 이하의 몬스터에게 이동해 일반 공격합니다. 사냥 중에는 현재 목표만 마무리하고, 대기 중에는 범위 안의 저체력 몬스터를 찾습니다.")
-boundButton(finishCard,function() return "마무리 대상: "..(state.finishTarget and state.finishTarget.name or "대기") end,function() end)
 local poseCard = section(pages[1], "TRACKING  /  추적과 자세")
 row(poseCard,"이동과 추적은 모두 즉시 이동입니다.")
 cycle(poseCard, "사냥 위치", "positionMode", {"위", "아래", "뒤", "앞"})
@@ -1584,8 +1621,9 @@ local questInfo = row(pages[2], "")
 toggle(pages[2], "완료 후 같은 퀘스트 반복", "repeatQuest")
 boundButton(pages[2], function() return state.mode == "quest" and "퀘스트 자동화 정지" or "퀘스트 자동화 시작" end,
     function() if state.mode == "quest" then stop("퀘스트 자동화 정지") else start("quest") end end)
-row(pages[2], "배송·수집·선행 스토리 분기는 이 버전에 포함하지 않았습니다. 직접 수락한 처치 퀘스트도 이어서 진행할 수 있습니다.")
+row(pages[2], "Level Farm은 26–39 구간에서 Kazu → Suspicious Note → Noote → Chaka 선행 진행을 확인합니다. Suspicious Note 드롭은 상자 / 아이템 수집도 켜 주세요.")
 
+row(pages[2],"열린 퀘스트 메뉴는 NPC에게 다시 이동하지 않고 바로 수락합니다. 메뉴가 없으면 기존 대화가 필요합니다.")
 local levelCard = section(pages[2], "AUTO LEVEL FARM")
 row(levelCard, "현재 Level 이하의 처치 퀘스트를 자동 선택합니다. 진행 중인 퀘스트를 먼저 마치고, 올라간 Level로 다시 선택하고 수락될 때까지 대화합니다.")
 local levelLabel = row(levelCard, "Level · 읽는 중")
@@ -1682,7 +1720,7 @@ refreshUI = function()
     pageTitle.Text = pageTitles[selectedTab]
     local q = DATA.quests[state.questIndex]
     levelLabel.Text = "Current Level · " .. tostring(readLevel() or "unavailable")
-    questInfo.Text = "NPC: " .. q.npc .. " / 대상: " .. q.mob .. "\n대화 항목: " .. q.key
+    questInfo.Text = "NPC: " .. q.npc .. " / 대상: " .. (q.mob or q.talkTo or "대화") .. "\n대화 항목: " .. q.key
     statusLabel.Text = state.phase .. "\n" .. state.message
     logLabel.Text = "최근 기록\n" .. table.concat(logs, "\n")
 end
@@ -1832,7 +1870,6 @@ connect(RunService.Heartbeat, function(dt)
     -- Follow the live target every frame, independent of scans, UI and quest polling.
     local fastOK, fastProblem = pcall(function()
         if heldMouse and (os.clock() >= heldMouse.untilTime or not windowActive) then releaseMouse() end
-        finishTick()
         fishingFrame()
         lootFrame()
         trackFrame(dt)
